@@ -2,12 +2,14 @@ import React, {useState, useEffect, useRef} from 'react'
 import logo from '../../assets/logo.jpeg'
 import './Navbar.css'
 import { FaSearch } from 'react-icons/fa'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
+import { HashLink } from "react-router-hash-link";
 
 
 const Navbar = () => {
 
    const [open, setOpen] = useState(false);
+   const [aboutopen, setAboutOpen] = useState(false);
     const [selected, setSelected] = useState("English");
     const dropdownRef = useRef(null);
     const navigate = useNavigate()
@@ -86,7 +88,42 @@ const Navbar = () => {
 
         <div className="nav-items">
           <ul type='none' className='nav-list'>
-              <li><a  href ="/about"  >About</a></li>
+              <li className="nav-item about-dropdown">
+                <Link to="/about" className="about-link">
+                  About
+                  <span className="aboutarrow">▼</span>
+                </Link>
+
+                <ul className="about-dropdown-menu">
+
+                  <li>
+                    <HashLink smooth  to="/about#vision">Vision</HashLink>
+                  </li>
+
+                  <li>
+                    <HashLink smooth  to="/about#mission">Mission</HashLink>
+                  </li>
+
+                  <li>
+                    <HashLink smooth  to="/about#board-of-advisors">
+                      Board of Advisors
+                    </HashLink>
+                  </li>
+
+                  <li>
+                    <HashLink smooth  to="/about#board-of-advisors">
+                      Board of Directors
+                    </HashLink>
+                  </li>
+
+                  <li>
+                    <HashLink smooth  to="/about#board-of-advisors">
+                      Team
+                    </HashLink>
+                  </li>
+
+                </ul>
+              </li>
               <li><a  href ="/solutions"  >Solution</a></li>
               <li><a  href ="/knowledgehub"  >Knowledege hub</a></li>
               <li><a  href ="https://www.indiaesgsummit.com/" target="_blank"  >Events</a></li>

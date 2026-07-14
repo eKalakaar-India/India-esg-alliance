@@ -9,6 +9,7 @@
     background-color: white;
     /* border-bottom: 1px solid #C5C6D1; */
     box-shadow:0px 1px 10px #C5C6D1;
+    overflow: visible;
 }
 
 .nav-upper-section{
@@ -23,6 +24,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: visible;
 }
 
 .nav-list{
@@ -32,14 +34,14 @@
     width:50%;
 }
 
-.nav-list li{
+.nav-list > li{
     color:black;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    position: relative;
-    padding-bottom: 8px;
-    overflow: hidden;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    position:relative;
+    padding-bottom:8px;
+    overflow:visible;
 }
 
 .nav-list li a{
@@ -212,4 +214,108 @@
 .dropdown-item.active {
   background: #efefef;
   font-weight: 600;
+}
+
+.about-dropdown{
+  position:relative;
+}
+
+.about-link{
+    display:flex;
+    align-items:center;
+    gap:6px;
+}
+
+.aboutarrow{
+    font-size:10px;
+    transition:.3s;
+}
+
+/* Rotate Arrow */
+
+.about-dropdown:hover .aboutarrow{
+    transform:rotate(180deg);
+}
+
+/* Dropdown */
+
+.about-dropdown-menu{
+
+    position:absolute;
+
+    top:calc(100% + 12px);
+
+    left:0;
+
+    width:250px;
+
+    padding:10px 0;
+
+    margin:0;
+
+    background:white;
+
+    border-radius:14px;
+
+    list-style:none;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:translateY(10px);
+
+    transition:.25s ease;
+
+    z-index:999;
+}
+
+/* Show Dropdown */
+
+.about-dropdown:hover .about-dropdown-menu{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateY(0);
+}
+
+.about-dropdown-menu li{
+
+    width:100%;
+
+    padding:0;
+
+    margin:0;
+}
+
+/* Remove underline animation inside dropdown */
+
+.about-dropdown-menu li::after{
+    display:none;
+}
+
+.about-dropdown-menu li a{
+
+    display:block;
+
+    padding:14px 22px;
+
+    color:#444650;
+
+    text-decoration:none;
+
+    transition:.25s;
+}
+
+.about-dropdown-menu li a:hover{
+
+    background:#eef7ef;
+
+    color:#00450D;
+
+    padding-left:28px;
 }

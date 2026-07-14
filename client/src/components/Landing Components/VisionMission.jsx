@@ -12,7 +12,7 @@ import aboutcheck from '../../assets/aboutcheck.svg'
 const VisionMission = () => {
   return (
     <div className='vision-mission-div'>
-        <div className="vision-section">
+        <div className="vision-section" id ="vision">
             <div className='vision-main'>
                 <p style={{fontSize:"18px", color:"#00450D", fontWeight:"500", letterSpacing:"1.6px"}}>OUR VISION</p>
                 <p style={{ fontSize:"48px", color:"#191D17", fontWeight:"bold", width:"70%"}}>"Making India a global leader in
@@ -35,7 +35,7 @@ const VisionMission = () => {
                 </div>
             </div>
         </div>
-        <div className="mission-section">
+        <div className="mission-section" id = "mission">
             <div className="mission-header">
                 <p style={{fontSize:"32px", fontWeight:"700", color:"#191D17"}}>The Pillars of our Mission</p>
                 <p style={{ fontSize:"18px", color:"#41493E", width:"50%"}}>We operationalize sustainability through four strategic domains, ensuring measurable

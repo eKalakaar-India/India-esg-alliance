@@ -41,7 +41,7 @@ const experts = [
 
 export default function IndustryExperts() {
   return (
-    <section className="experts-section">
+    <section className="experts-section" id="board-of-advisors">
       <div className="experts-header">
         <div>
           <h2>Industry Experts</h2>
