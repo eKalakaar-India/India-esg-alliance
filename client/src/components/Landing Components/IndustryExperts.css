@@ -1,0 +1,136 @@
+.experts-section {
+  background: #f4f5f7;
+  padding: 80px 50px;
+}
+
+.experts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+  gap: 20px;
+}
+
+.experts-header h2 {
+  font-size: 32px;
+  color: #000D2F;
+  margin-bottom: 10px;
+}
+
+.experts-header p {
+  color: #444650;
+  font-size: 16px;
+}
+
+.view-all-btn {
+  padding: 20px 12px;
+  border: 1px solid #C5C6D1;
+  background: white;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #000D2F;
+}
+
+.experts-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.expert-card {
+  background: #fff;
+  padding: 24px;
+  border-radius: 24px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
+}
+
+.expert-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 22px;
+}
+
+.expert-card h3 {
+  font-size: 16px;
+  color: #000D2F;
+  margin-bottom: 8px;
+}
+
+.expert-role {
+  color: #1B6D24;
+  font-size: 16px;
+  display: block;
+  margin-bottom: 22px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.star {
+  color: #1f8b3f;
+  font-size: 18px;
+}
+
+.rating strong {
+  color: #1f2937;
+}
+
+.audits {
+  color: #6b7280;
+}
+
+.profile-btn {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 14px;
+  font-size: 16px;
+  background: #f3f4f6;
+  font-weight: 700;
+  color: #000D2F;
+  cursor: pointer;
+}
+
+/* Tablet */
+@media (max-width: 1100px) {
+  .experts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .experts-section {
+    padding: 60px 20px;
+  }
+
+  .experts-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .experts-header h2 {
+    font-size: 2rem;
+  }
+
+  .experts-header p {
+    font-size: 1rem;
+  }
+
+  .experts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .view-all-btn {
+    width: 100%;
+  }
+}

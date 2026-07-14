@@ -1,0 +1,477 @@
+/* ===========================
+   KNOWLEDGE HUB
+=========================== */
+
+.knowledge-hub{
+    width:100%;
+    padding:100px 6%;
+    background:#fff;
+    box-sizing:border-box;
+    position:relative;
+    z-index:2;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+#particles{
+    position:absolute;
+    width:100%;
+    height:100%;
+    inset:0;
+    z-index:0;
+}
+
+.knowledgehero-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap:20px;
+    position:relative;
+    z-index:2;
+}
+
+
+.kh-header{
+    max-width:900px;
+    margin:0 auto 70px;
+    text-align:center;
+}
+
+.kh-badge{
+    display:inline-block;
+    padding:10px 22px;
+    border-radius:40px;
+    background:#98ea8a;
+    color:#01531d;
+    font-size:14px;
+    font-weight:500;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    margin-bottom:28px;
+}
+
+.kh-header h2{
+    margin:0;
+    font-size:48px;
+    color:#00450D;
+    line-height:1.1;
+    font-weight:700;
+}
+
+.kh-header p{
+    margin:30px auto;
+    max-width:760px;
+    font-size:20px;
+    line-height:1.7;
+    color:#41493E;
+}
+
+/* ===========================
+   SEARCH
+=========================== */
+
+.kh-search{
+
+    width:100%;
+    max-width:560px;
+
+    margin:40px auto 0;
+
+    display:flex;
+    align-items:center;
+
+    background:#fff;
+
+    border:1px solid #d9dfd6;
+
+    border-radius:16px;
+
+    height:70px;
+
+    padding:0 22px;
+
+    transition:.3s;
+}
+
+.kh-search:focus-within{
+
+    border-color:#0b6c2c;
+
+    box-shadow:0 0 0 4px rgba(11,108,44,.08);
+}
+
+.search-icon{
+
+    font-size:22px;
+
+    color:#0b6c2c;
+}
+
+.kh-search input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    background:transparent;
+
+    padding-left:18px;
+
+    font-size:18px;
+
+    color:#333;
+}
+
+.kh-search input::placeholder{
+
+    color:#888;
+}
+
+/* ===========================
+   CARD
+=========================== */
+
+.resource-card{
+
+    display:grid;
+
+    grid-template-columns:420px 1fr;
+
+    gap:50px;
+
+    background:#fff;
+
+    border-radius:26px;
+
+    padding:28px;
+
+    border:1px solid #e6e6e6;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.06);
+
+    align-items:center;
+
+    transition:.35s;
+}
+
+.resource-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+        0 35px 70px rgba(0,0,0,.1);
+}
+
+/* ===========================
+   IMAGE
+=========================== */
+
+.resource-image{
+
+    background:#f3f5f2;
+
+    border-radius:18px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:25px;
+
+    min-height:420px;
+}
+
+.resource-image img{
+
+    width:70%;
+
+    object-fit:contain;
+
+    filter:drop-shadow(0 25px 35px rgba(0,0,0,.25));
+
+    transition:.4s;
+}
+
+.resource-card:hover img{
+
+    transform:scale(1.05);
+}
+
+/* ===========================
+   CONTENT
+=========================== */
+
+.resource-info h3{
+
+    margin:0;
+
+    font-size:32px;
+    font-weight: 700;
+    line-height:1.2;
+
+    color:#00450D;
+}
+
+.resource-info p{
+
+    margin:28px 0 35px;
+
+    color:#41493E;
+
+    font-size:18px;
+
+    line-height:1.8;
+}
+
+/* ===========================
+   TAGS
+=========================== */
+
+.resource-tags{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:28px;
+
+    margin-bottom:45px;
+}
+
+.tag{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:16px;
+
+    color:#191D17;
+
+    font-weight:700;
+}
+
+.tag svg{
+
+    color:#197a35;
+
+    font-size:18px;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.resource-buttons{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:22px;
+
+    flex-wrap:wrap;
+}
+
+.download-btn{
+
+    height:62px;
+
+    padding:0 34px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#01541f;
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.download-btn:hover{
+
+    background:#0d7130;
+
+    transform:translateY(-3px);
+}
+
+.read-btn{
+
+    height:62px;
+
+    padding:0 30px;
+
+    border:2px solid transparent;
+
+    background:transparent;
+
+    color:#01541f;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.read-btn:hover{
+
+    color:#0d7130;
+}
+
+/* ===========================
+   EMPTY
+=========================== */
+
+.empty-state{
+
+    text-align:center;
+
+    padding:80px 20px;
+}
+
+.empty-state h3{
+
+    font-size:36px;
+
+    margin-bottom:15px;
+
+    color:#004b17;
+}
+
+.empty-state p{
+
+    color:#777;
+
+    font-size:18px;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:1200px){
+
+    .resource-card{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+    }
+
+    .resource-tags{
+
+        justify-content:center;
+    }
+
+    .resource-buttons{
+
+        justify-content:center;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .knowledge-hub{
+
+        padding:70px 20px;
+    }
+
+    .kh-header h2{
+
+        font-size:42px;
+    }
+
+    .kh-header p{
+
+        font-size:18px;
+    }
+
+    .kh-search{
+
+        height:60px;
+    }
+
+    .resource-info h3{
+
+        font-size:34px;
+    }
+
+    .resource-info p{
+
+        font-size:17px;
+    }
+
+    .resource-image{
+
+        min-height:300px;
+    }
+
+    .resource-image img{
+
+        width:80%;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .kh-header h2{
+
+        font-size:32px;
+    }
+
+    .kh-badge{
+
+        font-size:12px;
+    }
+
+    .resource-card{
+
+        padding:18px;
+    }
+
+    .resource-tags{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:15px;
+    }
+
+    .resource-buttons{
+
+        flex-direction:column;
+    }
+
+    .download-btn,
+    .read-btn{
+
+        width:100%;
+    }
+
+}

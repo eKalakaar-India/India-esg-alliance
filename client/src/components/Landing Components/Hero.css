@@ -1,0 +1,167 @@
+.hero-main{
+    width: 100%;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    /* background: #A0F399; */
+    /* background: linear-gradient(45deg, rgba(160, 243, 153, 1) 1%, rgba(215, 250, 212, 1) 13%, rgba(255, 255, 255, 1) 47%, rgba(211, 214, 220, 1) 84%, rgba(130, 137, 154, 1) 100%, rgba(0, 13, 47, 1) 100%); */
+    /* padding: 40px; */
+}
+
+.hero-slide {
+    height: 900px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index:1;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.glass-card{
+    position: absolute;
+    top:20%;
+    left:15%;
+    height:70%;
+    width: 70%;
+    background: rgba(255, 255, 255, 0.1); 
+    z-index: 8;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:30px;
+    padding: 30px;
+}
+
+.hero-tag{
+    display: flex;
+    width: 27%;
+    border: 1px solid white;
+    border-radius: 30px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: inherit;
+    padding:8px;
+    font-size: 16px;
+    color:white;
+}
+
+.hero-header{
+    font-size: 64px;
+    text-align: center;
+    color:white;
+}
+
+.hero-para{
+    text-align: center;
+    color:white;
+    font-size: 20px;
+}
+
+.glass-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:50px;
+}
+
+.hero-btn1{
+    background-color: #00450D;
+    color: white;
+    font-size: 18px;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    cursor: pointer;
+}
+
+.hero-btn2{
+    color:white;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+.green{
+    width: 10px;
+    height: 10px;
+    background-color:#88D982;
+    border-radius: 100%;
+}
+
+.hero-overlay{
+    width: 100%;
+    height:100%;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    z-index: 3;
+}
+
+
+.carousel-container {
+    width: 100%;
+    height: 900px;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.react-multi-carousel-list {
+    width: 100%;
+    height: 900px;
+}
+
+.react-multi-carousel-track {
+    height: 100%;
+}
+
+.react-multi-carousel-item {
+    height: 100%;
+}
+
+p{
+    margin:0;
+}
+
+h1{
+    margin:0;
+}
+
+.hero-title{
+    width: 50%;
+    font-size: 48px;
+    font-weight: bold;
+    color:#000D2F;
+}
+
+.hero-desc{
+    color:#444650;
+    font-size: 18px;
+    width: 50%;
+}
+
+.hero-btns{
+    width: 40%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap:30px;
+}
+
