@@ -226,7 +226,7 @@ const AllianceDirectory = () => {
           </div>
 
           <div className="training-list">
-            {topThreeTrainings.map((event) => {
+            {topThreeTrainings.map((event, idx) => {
               const isRange = event.day.includes("-");
               return (
                 <div
@@ -251,18 +251,20 @@ const AllianceDirectory = () => {
                     <p>{event.subtitle}</p>
                   </div>
 
-                  <button
-                    className="register-btn"
-                    onClick={() =>
-                      window.open(
-                        "https://www.indiaesgsummit.com/",
-                        "_blank",
-                        "noopener,noreferrer",
-                      )
-                    }
-                  >
-                    Register
-                  </button>
+                  {idx === 0 && (
+                    <button
+                      className="register-btn"
+                      onClick={() =>
+                        window.open(
+                          "https://www.indiaesgsummit.com/",
+                          "_blank",
+                          "noopener,noreferrer",
+                        )
+                      }
+                    >
+                      Register
+                    </button>
+                  )}
                 </div>
               );
             })}

@@ -1,28 +1,42 @@
 import React, { useState, useEffect, useRef } from "react";
+
 import logo from "../../assets/logo.jpeg";
+
 import "./Navbar.css";
+
 import { FaSearch, FaTimes, FaExternalLinkAlt } from "react-icons/fa";
+
 import { useNavigate, Link } from "react-router-dom";
+
 import { HashLink } from "react-router-hash-link";
+
 import { searchableContent } from "../../data/searchIndex";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const [selected, setSelected] = useState("English");
+
+  const [selected, setSelected] = useState("Eng");
+
   const [searchQuery, setSearchQuery] = useState("");
+
   const [searchResults, setSearchResults] = useState([]);
+
   const [showResults, setShowResults] = useState(false);
 
   const dropdownRef = useRef(null);
+
   const searchContainerRef = useRef(null);
+
   const navigate = useNavigate();
 
   // Close menus when clicking outside
+
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
         setOpen(false);
       }
+
       if (
         searchContainerRef.current &&
         !searchContainerRef.current.contains(e.target)
@@ -32,12 +46,15 @@ const Navbar = () => {
     };
 
     document.addEventListener("mousedown", handleClickOutside);
+
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   // Filter content across titles and keywords
+
   const handleSearchChange = (e) => {
     const query = e.target.value;
+
     setSearchQuery(query);
 
     if (query.trim().length > 1) {
@@ -47,22 +64,27 @@ const Navbar = () => {
           item.keywords.toLowerCase().includes(query.toLowerCase()) ||
           item.category.toLowerCase().includes(query.toLowerCase()),
       );
+
       setSearchResults(filtered);
+
       setShowResults(true);
     } else {
       setSearchResults([]);
+
       setShowResults(false);
     }
   };
 
   const handleSelectResult = (item) => {
     setShowResults(false);
+
     setSearchQuery("");
 
     if (item.external) {
       window.open(item.path, "_blank", "noopener,noreferrer");
     } else if (item.path.includes("#")) {
       // HashLink-compatible route
+
       navigate(item.path);
     } else {
       navigate(item.path);
@@ -75,9 +97,13 @@ const Navbar = () => {
         <div
           style={{
             display: "flex",
+
             alignItems: "center",
+
             justifyContent: "center",
+
             gap: "10px",
+
             cursor: "pointer",
           }}
         >
@@ -93,6 +119,7 @@ const Navbar = () => {
 
         <div className="nav-btns">
           {/* Global Search Container */}
+
           <div className="searchbar-wrapper" ref={searchContainerRef}>
             <div className="searchbar">
               <input
@@ -112,6 +139,7 @@ const Navbar = () => {
                   className="search-clear-btn"
                   onClick={() => {
                     setSearchQuery("");
+
                     setShowResults(false);
                   }}
                 >
@@ -123,6 +151,7 @@ const Navbar = () => {
             </div>
 
             {/* Live Search Results Modal/Dropdown */}
+
             {showResults && (
               <div className="search-results-box">
                 {searchResults.length > 0 ? (
@@ -134,8 +163,10 @@ const Navbar = () => {
                     >
                       <div className="result-text">
                         <span className="result-title">{item.title}</span>
+
                         <span className="result-cat">{item.category}</span>
                       </div>
+
                       {item.external && (
                         <FaExternalLinkAlt className="ext-icon" />
                       )}
@@ -153,9 +184,13 @@ const Navbar = () => {
           <div
             style={{
               display: "flex",
+
               justifyContent: "space-between",
+
               alignItems: "center",
+
               width: "30%",
+
               gap: "12px",
             }}
           >
@@ -167,29 +202,34 @@ const Navbar = () => {
               >
                 <div className="left">
                   <span className="icon">🌐</span>
+
                   <span>{selected}</span>
                 </div>
+
                 <span className={`arrow ${open ? "rotate" : ""}`}>▼</span>
               </button>
 
               <div className={`dropdown-menu ${open ? "show" : ""}`}>
                 <div
-                  className={`dropdown-item ${selected === "English" ? "active" : ""}`}
+                  className={`dropdown-item ${selected === "Eng" ? "active" : ""}`}
                   onClick={() => {
-                    setSelected("English");
+                    setSelected("Eng");
+
                     setOpen(false);
                   }}
                 >
-                  English
+                  Eng
                 </div>
+
                 <div
-                  className={`dropdown-item ${selected === "Hindi" ? "active" : ""}`}
+                  className={`dropdown-item ${selected === "Hin" ? "active" : ""}`}
                   onClick={() => {
-                    setSelected("Hindi");
+                    setSelected("Hin");
+
                     setOpen(false);
                   }}
                 >
-                  Hindi
+                  Hin
                 </div>
               </div>
             </div>
@@ -206,6 +246,7 @@ const Navbar = () => {
           <li>
             <Link to="/home">Home</Link>
           </li>
+
           <li className="nav-item about-dropdown">
             <Link to="/about" className="about-link">
               About
@@ -218,21 +259,25 @@ const Navbar = () => {
                   Vision
                 </HashLink>
               </li>
+
               <li>
                 <HashLink smooth to="/about#mission">
                   Mission
                 </HashLink>
               </li>
+
               <li>
                 <HashLink smooth to="/about#board-of-advisors">
                   Board of Advisors
                 </HashLink>
               </li>
+
               <li>
                 <HashLink smooth to="/about#board-of-advisors">
                   Board of Directors
                 </HashLink>
               </li>
+
               <li>
                 <HashLink smooth to="/about#board-of-advisors">
                   Team
@@ -240,9 +285,11 @@ const Navbar = () => {
               </li>
             </ul>
           </li>
+
           <li>
             <Link to="/solutions">Our Services</Link>
           </li>
+
           <li>
             <a
               href="https://www.indiaesgsummit.com/"
@@ -252,9 +299,11 @@ const Navbar = () => {
               Events
             </a>
           </li>
+
           <li>
             <Link to="/knowledgehub">Knowledge Hub</Link>
           </li>
+
           <li>
             <Link to="/contactus">Contact Us</Link>
           </li>
