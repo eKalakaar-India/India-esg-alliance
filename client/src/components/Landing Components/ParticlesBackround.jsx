@@ -35,7 +35,7 @@ export default function ParticlesBackground(props) {
             value: "#1B6D24",
           },
           links: {
-            enable: props.link ,
+            enable: props.link,
             color: "rgba(0, 69, 13, 1)",
             distance: 150,
           },

@@ -13,7 +13,7 @@
 
 .experts-header h2 {
   font-size: 32px;
-  color: #000D2F;
+  color: #000d2f;
   margin-bottom: 10px;
 }
 
@@ -24,13 +24,13 @@
 
 .view-all-btn {
   padding: 20px 12px;
-  border: 1px solid #C5C6D1;
+  border: 1px solid #c5c6d1;
   background: white;
   border-radius: 14px;
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  color: #000D2F;
+  color: #000d2f;
 }
 
 .experts-grid {
@@ -56,12 +56,12 @@
 
 .expert-card h3 {
   font-size: 16px;
-  color: #000D2F;
+  color: #000d2f;
   margin-bottom: 8px;
 }
 
 .expert-role {
-  color: #1B6D24;
+  color: #1b6d24;
   font-size: 16px;
   display: block;
   margin-bottom: 22px;
@@ -96,7 +96,7 @@
   font-size: 16px;
   background: #f3f4f6;
   font-weight: 700;
-  color: #000D2F;
+  color: #000d2f;
   cursor: pointer;
 }
 
@@ -131,6 +131,191 @@
   }
 
   .view-all-btn {
+    width: 100%;
+  }
+}
+
+/* ===========================
+   EXPERT PROFILE MODAL
+=========================== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 13, 47, 0.6);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  animation: fadeIn 0.25s ease-out;
+}
+
+.expert-modal-content {
+  background: #ffffff;
+  width: 100%;
+  max-width: 760px;
+  border-radius: 24px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  position: relative;
+  overflow: hidden;
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  background: #f3f4f6;
+  border: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  font-size: 16px;
+  color: #4b5563;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.modal-close-btn:hover {
+  background: #e5e7eb;
+  color: #111827;
+  transform: rotate(90deg);
+}
+
+.modal-body {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 32px;
+  padding: 40px;
+}
+
+.modal-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.modal-expert-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.modal-rating-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #166534;
+}
+
+.modal-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-expert-role {
+  color: #1b6d24;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.modal-expert-name {
+  font-size: 26px;
+  font-weight: 700;
+  color: #000d2f;
+  margin: 0 0 18px 0;
+}
+
+.modal-lorem-text h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 14px 0 6px 0;
+}
+
+.modal-lorem-text p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #4b5563;
+  margin: 0;
+}
+
+.modal-actions {
+  margin-top: 24px;
+}
+
+.modal-primary-btn {
+  background: #00450d;
+  color: #ffffff;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.modal-primary-btn:hover {
+  background: #006313;
+  transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Responsive Modal */
+@media (max-width: 768px) {
+  .modal-body {
+    grid-template-columns: 1fr;
+    padding: 30px 20px;
+    gap: 20px;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  .modal-expert-img {
+    height: 220px;
+    width: 220px;
+  }
+
+  .modal-primary-btn {
     width: 100%;
   }
 }

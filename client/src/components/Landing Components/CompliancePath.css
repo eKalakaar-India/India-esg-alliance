@@ -11,22 +11,22 @@
   left: 0;
   width: 100%;
   height: 100px;
-  background-color:#F7FBF1;
+  background-color: #f7fbf1;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120' preserveAspectRatio='none'%3E%3Cpath fill='%23ffffff' d='M0,50 C180,100 360,0 540,30 C720,60 900,90 1080,40 C1260,-10 1380,20 1440,40 L1440,120 L0,120 Z'/%3E%3C/svg%3E")
-      no-repeat center top;
-  z-index:10;
+    no-repeat center top;
+  z-index: 10;
   background-size: 100% 100%;
 }
 
-.pioneer-content{
+.pioneer-content {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  gap:40px;
+  gap: 40px;
   align-items: center;
 }
 
-.img-room{
+.img-room {
   /* border: 1px solid black; */
   /* border-radius: 80px; */
   width: 40%;
@@ -38,33 +38,37 @@
   position: relative;
 }
 
-.img-room img{
+.img-room img {
   width: 100%;
   height: 100%;
   position: relative;
 }
 
-.room-content{
+.room-content {
   position: absolute;
-  bottom:20px;
-  right:-30px;
+  bottom: 20px;
+  right: -30px;
   background-color: white;
-  padding:12px;
-  width: 30%;
+  padding: 12px 18px;
+
+  /* Fits the exact size of the text */
+  width: max-content;
+  max-width: 100%;
+  white-space: nowrap;
 
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center; /* or flex-start based on alignment preference */
+  gap: 4px;
   border-radius: 20px;
   border: 1px solid #e5e5e5;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
-
-.pioneer-content-section{
+.pioneer-content-section {
   width: 60%;
   display: flex;
   flex-direction: column;
-  gap:40px;
+  gap: 40px;
 }
-
-
-
