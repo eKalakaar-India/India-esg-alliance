@@ -11,7 +11,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 // Import your director images (or replace with appropriate assets)
-import sanjay from "../../assets/Sanjaya.png";
+import sanjay from "../../assets/sanjaya.png";
 import stalin from "../../assets/stalin.jpeg";
 
 const rolesData = [
