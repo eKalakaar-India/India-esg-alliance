@@ -138,6 +138,7 @@ const WhyIEA = () => {
       {/* 3. Directors Section - zoom-out-up */}
       <div
         className="why-directors-wrapper"
+        id="board-of-directors"
         data-aos="zoom-out-up"
         data-aos-duration="800"
       >

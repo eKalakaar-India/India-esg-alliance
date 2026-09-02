@@ -53,7 +53,7 @@ const Hero = () => {
         infinite
         autoPlay
         autoPlaySpeed={4500}
-        showDots
+        showDots={false}
         arrows={false}
         transitionDuration={700}
         containerClass="carousel-container"
@@ -87,6 +87,7 @@ const Hero = () => {
           <Carousel
             responsive={responsive}
             infinite
+            draggable={false}
             autoPlay
             autoPlaySpeed={3000}
             arrows={false}

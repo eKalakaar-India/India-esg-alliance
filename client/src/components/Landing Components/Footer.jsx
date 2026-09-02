@@ -1,6 +1,6 @@
 import "./Footer.css";
 import { FaShareAlt, FaGlobe, FaPaperPlane } from "react-icons/fa";
-import logo from "../../assets/logo.jpeg";
+import logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
 export default function Footer() {
   return (
@@ -9,7 +9,7 @@ export default function Footer() {
         {/* Left */}
 
         <div className="footer-column company">
-          <img src={logo} width={90} height={70} className="nav-logo" />
+          <img src={logo} width={140} height={80} className="nav-logo" />
           {/* <h2>India ESG Alliance</h2> */}
 
           <p>

@@ -12,7 +12,7 @@ export default function Pioneer() {
   }, []);
 
   return (
-    <section className="compliance-section" data-aos="fade-up">
+    <section className="compliance-section" >
       <div className="pioneer-content">
         <div
           className="img-room"

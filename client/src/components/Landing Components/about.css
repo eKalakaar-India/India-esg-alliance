@@ -5,7 +5,7 @@
     padding:40px;
     margin-top: 50px;
     align-items: center;
-    background-color: white;
+    background-color: rgb(246, 249, 253);
     justify-content: center;
 }
 
@@ -28,7 +28,6 @@
     font-size: 20px;
 }
 
-
 .about-card-section{
     width: 100%;
     display: flex;
@@ -48,5 +47,26 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    border: 1px solid #d3d3d3;
+    background-color: white;
+    border: 1px solid #000D2F;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+#vision {
+  scroll-margin-top: 80px;
+}
+#mission {
+  scroll-margin-top: 80px;
+}
+#board-of-directors {
+  scroll-margin-top: 80px;
+}
+#board-of-advisors {
+  scroll-margin-top: 80px;
 }

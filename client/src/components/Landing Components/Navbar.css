@@ -38,7 +38,7 @@
   display: flex;
 
   justify-content: center;
-
+  
   align-items: center;
 
   overflow: visible;
@@ -51,7 +51,7 @@
 
   align-items: center;
 
-  width: 50%;
+  width: 70%;
 }
 
 .nav-list > li {
@@ -80,29 +80,24 @@
   }
 }
 
-.nav-list li::after {
+.nav-list > li::after {
   content: "";
-
   position: absolute;
-
   left: 0;
-
   bottom: 0;
-
   width: 100%;
-
   height: 2px;
-
   background-color: #00450d;
-
   transform: scaleX(0);
-
   transform-origin: bottom left;
-
   transition: transform 0.3s ease-in-out;
 }
 
-.nav-list li:hover::after {
+.nav-list > li:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-list > li:has(> a.active)::after {
   transform: scaleX(1);
 }
 
@@ -197,7 +192,7 @@
 
   min-width: 100px;
 
-  padding: 10px;
+  padding: 6px;
 
   border: 1px solid #d9d9d9;
 

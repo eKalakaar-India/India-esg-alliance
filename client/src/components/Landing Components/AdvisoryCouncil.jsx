@@ -53,7 +53,7 @@ const AdvisoryCouncil = () => {
   }, []);
 
   return (
-    <section className="advisory-section">
+    <section className="advisory-section" id="board-of-advisors">
       <div className="advisory-container">
         {/* Header */}
         <div className="advisory-header" data-aos="fade-up">

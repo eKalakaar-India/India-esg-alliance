@@ -1,21 +1,15 @@
 import React, { useState, useEffect, useRef } from "react";
-
-import logo from "../../assets/logo.jpeg";
-
+import logo from "../../assets/logo.png";
 import "./Navbar.css";
-
 import { FaSearch, FaTimes, FaExternalLinkAlt } from "react-icons/fa";
-
-import { useNavigate, Link } from "react-router-dom";
-
+import { useNavigate, NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-
 import { searchableContent } from "../../data/searchIndex";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
-  const [selected, setSelected] = useState("Eng");
+  const [selected, setSelected] = useState("English");
 
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -110,8 +104,8 @@ const Navbar = () => {
           <img
             src={logo}
             onClick={() => navigate("/")}
-            width={90}
-            height={70}
+            width={150}
+            height={60}
             className="nav-logo"
             alt="India ESG Alliance"
           />
@@ -213,29 +207,29 @@ const Navbar = () => {
                 <div
                   className={`dropdown-item ${selected === "Eng" ? "active" : ""}`}
                   onClick={() => {
-                    setSelected("Eng");
+                    setSelected("English");
 
                     setOpen(false);
                   }}
                 >
-                  Eng
+                  English
                 </div>
 
                 <div
                   className={`dropdown-item ${selected === "Hin" ? "active" : ""}`}
                   onClick={() => {
-                    setSelected("Hin");
+                    setSelected("Hindi");
 
                     setOpen(false);
                   }}
                 >
-                  Hin
+                  Hindi
                 </div>
               </div>
             </div>
 
             <button type="button" className="dashboard-btn">
-              Sign In / Sign Up
+              Sign-in
             </button>
           </div>
         </div>
@@ -244,50 +238,46 @@ const Navbar = () => {
       <div className="nav-items">
         <ul type="none" className="nav-list">
           <li>
-            <Link to="/home">Home</Link>
+            <NavLink to="/home" className={({ isActive }) => (isActive ? "active" : "")}>Home</NavLink>
           </li>
 
           <li className="nav-item about-dropdown">
-            <Link to="/about" className="about-link">
+            <NavLink to="/about" className={({ isActive }) =>
+              `about-link ${isActive ? "active" : ""}`
+            }>
               About
               <span className="aboutarrow">▼</span>
-            </Link>
+            </NavLink>
 
             <ul className="about-dropdown-menu">
               <li>
-                <HashLink smooth to="/about#vision">
+                <HashLink smooth to="/about#vision" scroll={(el) => el.scrollIntoView({ behavior: "smooth", block: "start" })}>
                   Vision
                 </HashLink>
               </li>
 
               <li>
-                <HashLink smooth to="/about#mission">
+                <HashLink smooth to="/about#mission" scroll={(el) => el.scrollIntoView({ behavior: "smooth", block: "start" })}>
                   Mission
                 </HashLink>
               </li>
 
               <li>
-                <HashLink smooth to="/about#board-of-advisors">
-                  Board of Advisors
-                </HashLink>
-              </li>
-
-              <li>
-                <HashLink smooth to="/about#board-of-advisors">
+                <HashLink smooth to="/about#board-of-directors" scroll={(el) => el.scrollIntoView({ behavior: "smooth", block: "start" })}>
                   Board of Directors
                 </HashLink>
               </li>
 
               <li>
-                <HashLink smooth to="/about#board-of-advisors">
-                  Team
+                <HashLink smooth to="/about#board-of-advisors" scroll={(el) => el.scrollIntoView({ behavior: "smooth", block: "start" })}>
+                  Advisory Council
                 </HashLink>
               </li>
             </ul>
           </li>
 
           <li>
-            <Link to="/solutions">Our Services</Link>
+            <NavLink to="/solutions" className={({ isActive }) => (isActive ? "active" : "")}>Our Services</NavLink>
           </li>
 
           <li>
@@ -301,11 +291,11 @@ const Navbar = () => {
           </li>
 
           <li>
-            <Link to="/knowledgehub">Knowledge Hub</Link>
+            <NavLink to="/knowledgehub" className={({ isActive }) => (isActive ? "active" : "")}>Knowledge Hub</NavLink>
           </li>
 
           <li>
-            <Link to="/contactus">Contact Us</Link>
+            <NavLink to="/contactus" className={({ isActive }) => (isActive ? "active" : "")}>Contact Us</NavLink>
           </li>
         </ul>
       </div>

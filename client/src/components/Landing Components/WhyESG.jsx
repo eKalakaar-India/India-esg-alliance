@@ -28,7 +28,7 @@ const WhyESG = () => {
           data-aos="zoom-in"
           data-aos-delay="100"
           data-aos-duration="800"
-          style={{ padding: "18px 16px" }}
+          // style={{ padding: "18px 16px" }}
         >
           <img
             src={arrow}
@@ -68,7 +68,7 @@ const WhyESG = () => {
           data-aos-delay="200"
           data-aos-duration="800"
           style={{
-            padding: "18px 16px",
+            // padding: "18px 16px",
             outline: "1px solid #1B6D24",
             borderTop: "4px solid #1B6D24",
           }}
@@ -110,7 +110,7 @@ const WhyESG = () => {
           data-aos="zoom-in"
           data-aos-delay="300"
           data-aos-duration="800"
-          style={{ padding: "18px 16px" }}
+          // style={{ padding: "18px 16px" }}
         >
           <img
             src={shield}
