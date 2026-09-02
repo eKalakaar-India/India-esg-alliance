@@ -1,0 +1,217 @@
+.consultation-section{
+    width:100%;
+    padding:80px 6%;
+    background:#f9fbf5;
+    box-sizing:border-box;
+}
+
+.consultation-card{
+
+    max-width:1050px;
+
+    margin:auto;
+
+    background:#fff;
+
+    border:2px dashed #bfd4bf;
+
+    border-radius:22px;
+
+    padding:32px 36px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:40px;
+
+    transition:.35s ease;
+}
+
+.consultation-card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.08);
+}
+
+/* ========================= */
+
+.consultation-content{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+}
+
+.consultation-icon{
+
+    width:64px;
+
+    height:64px;
+
+    border-radius:16px;
+
+    border:2px solid #0b6c2c;
+
+    color:#0b6c2c;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:30px;
+
+    flex-shrink:0;
+
+    transition:.3s;
+}
+
+.consultation-card:hover .consultation-icon{
+
+    background:#0b6c2c;
+
+    color:#fff;
+}
+
+.consultation-text h3{
+
+    margin:0 0 8px;
+
+    font-size:30px;
+
+    color:#01481d;
+
+    font-weight:700;
+}
+
+.consultation-text p{
+
+    margin:0;
+
+    color:#555;
+
+    font-size:20px;
+
+    line-height:1.7;
+
+    max-width:550px;
+}
+
+/* ========================= */
+
+.consultation-btn{
+
+    min-width:220px;
+
+    height:70px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#01551f;
+
+    color:#fff;
+
+    font-size:22px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.consultation-btn:hover{
+
+    background:#0d7030;
+
+    transform:translateY(-3px);
+}
+
+/* ========================= */
+
+@media(max-width:900px){
+
+    .consultation-card{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        padding:35px 25px;
+    }
+
+    .consultation-content{
+
+        flex-direction:column;
+    }
+
+    .consultation-text p{
+
+        max-width:100%;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .consultation-section{
+
+        padding:60px 20px;
+    }
+
+    .consultation-text h3{
+
+        font-size:24px;
+    }
+
+    .consultation-text p{
+
+        font-size:16px;
+    }
+
+    .consultation-btn{
+
+        width:100%;
+
+        min-width:unset;
+
+        height:60px;
+
+        font-size:18px;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .consultation-card{
+
+        border-radius:18px;
+
+        padding:25px 18px;
+    }
+
+    .consultation-icon{
+
+        width:56px;
+
+        height:56px;
+
+        font-size:24px;
+    }
+
+    .consultation-text h3{
+
+        font-size:20px;
+    }
+
+}
