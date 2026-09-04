@@ -105,12 +105,8 @@ const WhyIEA = () => {
         data-aos-duration="800"
       >
         <div className="why-purpose-subhead">
-          <h1 className="purpose-and-role" style={{color:"#0F2747"}}>Purpose & Role</h1>
-          <p>
-            Building a coordinated ESG ecosystem focused on capacity building,
-            standardization, and long-term institution building rather than
-            transactional interventions.
-          </p>
+          <span className="why-tag">Purpose & Role</span>
+          <h1 className="purpose-and-role" style={{color:"#0F2747"}}>Building a coordinated ESG ecosystem for long-term institutional capacity.</h1>
         </div>
 
         <div className="why-roles-grid">

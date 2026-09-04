@@ -32,7 +32,7 @@ const GlobalLeaders = () => {
           color: "#0F2747",
         }}
       >
-        OUR PARTNERS
+        OUR PARTNERS AND CLIENTS
       </p>
       <div className="brandcarousel-container">
          <div className="brandcarousel-track"> {/* First set */} 

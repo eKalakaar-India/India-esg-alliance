@@ -14,10 +14,12 @@ const VisionMission = () => {
 
   return (
     <div className="vision-mission-div"  style={{
-        backgroundImage: `url(${bg1})`,
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
+        // backgroundImage: `url(${bg1})`,
+        // backgroundPosition: "center",
+        // backgroundRepeat: "no-repeat",
+        // backgroundSize: "cover",
+        // backdropFilter:"10px"
+        backgroundColor:"#2f7f7b2c"
       }}>
       {/* Vision Section */}
       <div className="vision-section" id="vision">

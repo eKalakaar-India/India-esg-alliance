@@ -17,7 +17,7 @@ const AboutHero = () => {
         <p className="tag-about">Est. 2020 • Driving Sustainability</p>
         <p className="about-hero-title">
           <span style={{ color: "#00450D" }}>
-            Welcome to <br /> INDIA ESG ALLIANCE
+            Welcome to <br /> India ESG Alliance
           </span>
         </p>
         <p className="about-hero-desc">

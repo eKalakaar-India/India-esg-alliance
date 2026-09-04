@@ -31,7 +31,7 @@ const Directors = () => {
       <div className="esg-director-container">
         <header className="esg-director-header">
           <span className="esg-director-pill">Leadership & Governance</span>
-          <h2 className="esg-director-title">Board of Directors</h2>
+          <h2 className="esg-director-title"> Directors</h2>
           <div className="title-divider" style={{justifySelf:"center"}}>
             <span className="sparkle">✦</span>
             <span className="line"></span>
@@ -55,7 +55,7 @@ const Directors = () => {
                 <div className="esg-director-image-overlay" />
               </div>
               <div className="esg-director-card-content">
-                <span className="esg-director-role-badge">{director.role}</span>
+                {/* <span className="esg-director-role-badge">{director.role}</span> */}
                 <h3 className="esg-director-card-name">{director.name}</h3>
                 <div className="esg-director-accent-line" />
                 <p className="esg-director-card-bio">{director.bio}</p>

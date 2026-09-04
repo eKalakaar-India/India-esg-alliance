@@ -69,7 +69,7 @@ const KnowledgeHub = () => {
           <div className="kh-header" data-aos="fade-up" data-aos-duration="800">
             <span className="kh-badge">Resources & Insights</span>
 
-            <h2>ESG Knowledge Hub</h2>
+            <h2> India ESG Alliance Knowledge Hub</h2>
 
             <p>
               Empowering MSMEs with the tools, knowledge, and certification
