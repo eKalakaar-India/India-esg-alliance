@@ -2,13 +2,15 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
 .vision-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f6f8f5; /* Fresh, soft ESG tinted background */
+  /* background-color: #f6f8f5; /*Fresh, soft ESG tinted background */
   padding: 80px 24px; /* Replaced 100vh with balanced padding */
   width: 100%;
   box-sizing: border-box;
@@ -21,7 +23,7 @@
   justify-content: center;
   gap: 20px; /* Reduced from 50px */
   text-align: center;
-  background-color: #ffffff;
+  background-color: #fffaf3;
   border-radius: 24px;
   max-width: 980px;
   width: 100%;
@@ -52,9 +54,9 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   gap: 40px;
-  /* align-items: center; */
+  align-items: center;
   padding: 60px 40px;
 }
 
@@ -247,12 +249,14 @@
 }
 
 .vision-badge {
+  width: 20%;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  justify-content: center;
+  gap:12px;
   background-color: #eaf8e8;
   color: #1b6d24;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 700;
   letter-spacing: 1.2px;
   text-transform: uppercase;
@@ -261,10 +265,15 @@
 }
 
 .vision-dot {
-  width: 6px;
-  height: 6px;
-  background-color: #1b6d24;
-  border-radius: 50%;
+  font-weight: 500;
+  color:#1b6d24;
+}
+
+.vision-mission-prop{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
 }
 
 /* Quote Typography */
@@ -272,7 +281,7 @@
   margin: 0;
   font-size: 38px;
   font-weight: 700;
-  color: #191d17;
+  color:#2F7F7B;
   line-height: 1.35;
   max-width: 820px;
   letter-spacing: -0.5px;

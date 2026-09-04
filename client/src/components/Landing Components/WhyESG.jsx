@@ -47,12 +47,11 @@ const WhyESG = () => {
               fontSize: "36px",
               fontWeight: "bold",
               color: "#00450D",
-              margin: "8px 0 4px",
             }}
           >
             2.5x
           </p>
-          <p style={{ fontSize: "18px", fontWeight: "600", margin: "0 0 6px" }}>
+          <p style={{ fontSize: "28px", fontWeight: "600", margin: "0 0 6px" }}>
             Capital Access
           </p>
           <p style={{ fontSize: "14px", color: "#41493E", margin: 0 }}>
@@ -90,12 +89,11 @@ const WhyESG = () => {
               fontSize: "36px",
               fontWeight: "bold",
               color: "#1B6D24",
-              margin: "8px 0 4px",
             }}
           >
             80%
           </p>
-          <p style={{ fontSize: "18px", fontWeight: "600", margin: "0 0 6px" }}>
+          <p style={{ fontSize: "28px", fontWeight: "600", margin: "0 0 6px" }}>
             Buyer Preference
           </p>
           <p style={{ fontSize: "14px", color: "#41493E", margin: 0 }}>
@@ -129,12 +127,11 @@ const WhyESG = () => {
               fontSize: "36px",
               fontWeight: "bold",
               color: "#003A75",
-              margin: "8px 0 4px",
             }}
           >
             40%
           </p>
-          <p style={{ fontSize: "18px", fontWeight: "600", margin: "0 0 6px" }}>
+          <p style={{ fontSize: "28px", fontWeight: "600", margin: "0 0 6px" }}>
             Risk Mitigation
           </p>
           <p style={{ fontSize: "14px", color: "#41493E", margin: 0 }}>

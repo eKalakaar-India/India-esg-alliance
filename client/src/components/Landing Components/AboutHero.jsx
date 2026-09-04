@@ -17,16 +17,11 @@ const AboutHero = () => {
         <p className="tag-about">Est. 2020 • Driving Sustainability</p>
         <p className="about-hero-title">
           <span style={{ color: "#00450D" }}>
-            Welcome to INDIA ESG Alliance
+            Welcome to <br /> INDIA ESG ALLIANCE
           </span>
         </p>
         <p className="about-hero-desc">
-          India ESG Alliance (IEA) is a one-stop ESG platform helping Indian
-          businesses, MSMEs, and institutions adopt sustainable and responsible
-          practices. It provides training, ESG assessments, reporting support,
-          advisory, and ecosystem collaboration, helping organizations meet SEBI
-          BRSR/BRSR Core and global standards while integrating practical,
-          value-driven sustainability beyond basic compliance.
+          India ESG Alliance (IEA) is a one-stop ESG platform helping Indian businesses, MSMEs, and institutions adopt responsible practices to achieve long-term success and sustainable growth. IEA provides need-based support through trainings, ESG assessments, reporting support, advisory, and ecosystem collaboration, helping organizations meet SEBI BRSR/BRSR Core and global standards while integrating practical, value-driven sustainability beyond basic compliance to unlock their full potential.
         </p>
 
         <div className="about-hero-btn">

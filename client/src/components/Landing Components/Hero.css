@@ -113,8 +113,14 @@
   padding: 0 10px;
 }
 
-.text-highlight {
-  color: #88d982;
+.text-highlight1 {
+  color: #EA7A2F;
+}
+.text-highlight2 {
+  color: #2563EB;
+}
+.text-highlight3 {
+  color: #19a34e;
 }
 
 .hero-para {
@@ -129,7 +135,8 @@
 /* Buttons */
 .glass-btn {
   display: flex;
-  justify-content: center;
+  width: 70%;
+  justify-content: space-between;
   align-items: center;
   gap: 24px;
   margin-top: 10px;
@@ -138,9 +145,11 @@
 .hero-btn1 {
   background-color: #00450d;
   color: white;
+  width:40%;
+  height: 100%;
   font-size: 16px;
   font-weight: 600;
-  padding: 14px 28px;
+  padding: 20px 28px;
   border-radius: 8px;
   display: flex;
   justify-content: center;
@@ -158,14 +167,17 @@
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.8);
   border-radius: 8px;
-  padding: 14px 28px;
+  text-align: center;
+  width: 40%;
+  height: 100%;
+  padding: 20px 28px;
   font-size: 16px;
   font-weight: 600;
-  background-color: rgba(255, 255, 255, 0.08);
+  background-color: #0A1B33;
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
 
 .hero-btn2:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: #EA7A2F;
 }

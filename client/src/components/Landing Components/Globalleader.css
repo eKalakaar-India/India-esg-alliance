@@ -2,7 +2,21 @@
     background-color: #F7FBF1;
     width: 100%;
     text-align: center;
-    padding: 90px 6%;
+    padding: 90px 0px;
+}
+
+.leader-div::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #F7FBF1;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120' preserveAspectRatio='none'%3E%3Cpath fill='%23F7FBF1' d='M0,50 C180,100 360,0 540,30 C720,60 900,90 1080,40 C1260,-10 1380,20 1440,40 L1440,120 L0,120 Z'/%3E%3C/svg%3E")
+    no-repeat center top;
+  z-index: 10;
+  background-size: 100% 100%;
 }
 
 .logo-section{
@@ -12,3 +26,213 @@
     align-items: center;
     padding:50px 0px;
 }
+
+
+.brandcarousel-container {
+  width: 100%;
+  height: 200px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.brandcarousel-container::before {
+  left: 0;
+  background: linear-gradient(to right, #fff, transparent);
+}
+
+.brandcarousel-container::after {
+  right: 0;
+  background: linear-gradient(to left, #fff, transparent);
+}
+
+.brandcarousel-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  height: 100%;
+  gap: 50px;
+
+  animation: scroll 22s linear infinite;
+  will-change: transform;
+}
+
+.brandcarousel-group {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-shrink: 0;
+}
+
+.brand-container {
+  width: 180px;
+  height: 150px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 16px;
+
+  box-shadow: 0 4px 10px #0000002e;
+}
+
+.brand-logo {
+  width: 100%;
+  height: 100%;
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+
+/*
+  Move exactly one complete group.
+  Since there are two identical groups,
+  when the first disappears the second is
+  in exactly the same position.
+*/
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 25px));
+  }
+}
+
+@media (max-width: 767px) {
+  .brandcarousel-container {
+    height: 160px;
+  }
+
+  .brand-container {
+    width: 140px;
+    height: 120px;
+  }
+
+  .brandcarousel-track,
+  .brandcarousel-group {
+    gap: 30px;
+  }
+
+  .brandcarousel-container::before,
+  .brandcarousel-container::after {
+    width: 50px;
+  }
+
+  .brand-logo {
+    max-width: 85%;
+    max-height: 85%;
+  }
+}
+
+.brandcarousel-container {
+  width: 100%;
+  height: 200px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.brandcarousel-container::before {
+  left: 0;
+  background: linear-gradient(to right, #fff, transparent);
+}
+
+.brandcarousel-container::after {
+  right: 0;
+  background: linear-gradient(to left, #fff, transparent);
+}
+
+.brandcarousel-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  height: 100%;
+  gap: 50px;
+
+  animation: scroll 22s linear infinite;
+  will-change: transform;
+}
+
+
+.brandcarousel-group {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-shrink: 0;
+}
+
+.brand-container {
+  width: 180px;
+  height: 150px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 16px;
+
+  box-shadow: 0 4px 10px #0000002e;
+}
+
+.brand-logo {
+  width: 100%;
+  height: 100%;
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+
+/*
+  Move exactly one complete group.
+  Since there are two identical groups,
+  when the first disappears the second is
+  in exactly the same position.
+*/
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 25px));
+  }
+}
+
+@media (max-width: 767px) {
+  .brandcarousel-container {
+    height: 160px;
+  }
+
+  .brand-container {
+    width: 140px;
+    height: 120px;
+  }
+
+  .brandcarousel-track,
+  .brandcarousel-group {
+    gap: 30px;
+  }
+
+  .brandcarousel-container::before,
+  .brandcarousel-container::after {
+    width: 50px;
+  }
+
+  .brand-logo {
+    max-width: 85%;
+    max-height: 85%;
+  }
+}
+

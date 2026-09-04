@@ -2,3 +2,21 @@ body{
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
+p{
+  margin:0;
+}
+
+
+:root {
+  --esg-forest-deep: #1b4332;
+  --esg-forest-mid: #2d6a4f;
+  --esg-emerald: #52b788;
+  --esg-sage-light: #e8f5e9;
+  --esg-bg-light: #f7f9f7;
+  --esg-card-bg: #ffffff;
+  --esg-text-dark: #122318;
+  --esg-text-muted: #4a5d50;
+  --esg-border: #d0e1d4;
+  --esg-shadow: 0 10px 25px -5px rgba(27, 67, 50, 0.08), 0 8px 10px -6px rgba(27, 67, 50, 0.04);
+  --esg-shadow-hover: 0 20px 35px -10px rgba(27, 67, 50, 0.16), 0 10px 12px -8px rgba(27, 67, 50, 0.08);
+}

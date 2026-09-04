@@ -14,10 +14,10 @@ const HomePage = () => {
     <div>
         <Navbar />
         <Hero />
+        <GlobalLeaders />
         <Pioneer />
         <WhyESG />
         <Services />
-        <GlobalLeaders />
         {/* <IndustryExperts /> */}
         <Footer />
     </div>

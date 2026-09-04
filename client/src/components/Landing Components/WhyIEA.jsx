@@ -105,7 +105,7 @@ const WhyIEA = () => {
         data-aos-duration="800"
       >
         <div className="why-purpose-subhead">
-          <h1 className="purpose-and-role">Purpose & Role</h1>
+          <h1 className="purpose-and-role" style={{color:"#0F2747"}}>Purpose & Role</h1>
           <p>
             Building a coordinated ESG ecosystem focused on capacity building,
             standardization, and long-term institution building rather than
@@ -135,51 +135,7 @@ const WhyIEA = () => {
 
       <br />
 
-      {/* 3. Directors Section - zoom-out-up */}
-      <div
-        className="why-directors-wrapper"
-        id="board-of-directors"
-        data-aos="zoom-out-up"
-        data-aos-duration="800"
-      >
-        <div className="why-purpose-subhead">
-          <h1 className="director-header">Directors</h1>
-          <p>
-            Visionary leaders driving the alliance's mission with decades of
-            impact in social entrepreneurship and sustainability.
-          </p>
-        </div>
-
-        <div className="why-directors-grid">
-          {directorsData.map((director, index) => (
-            <div
-              key={index}
-              className="director-profile-card"
-              data-aos="zoom-out-up"
-              data-aos-delay={index * 150}
-              data-aos-duration="800"
-            >
-              <div className="director-img-box">
-                {director.image ? (
-                  <img src={director.image} alt={director.name} />
-                ) : (
-                  <div className="director-placeholder">
-                    <FaUserTie className="placeholder-icon" />
-                  </div>
-                )}
-              </div>
-
-              <div className="director-info-box">
-                <div className="director-header-meta">
-                  <h3 className="director-name">{director.name}</h3>
-                  <p className="director-role">{director.role}</p>
-                </div>
-                <p className="director-bio">{director.bio}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+      
     </section>
   );
 };

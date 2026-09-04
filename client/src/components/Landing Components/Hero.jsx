@@ -19,28 +19,28 @@ const responsive = {
 const textSlides = [
   <>
     Empowering Indian MSMEs for{" "}
-    <span className="text-highlight">Global ESG Excellence</span>
+    <span className="text-highlight1">Global ESG Excellence</span>
   </>,
   <>
-    Building Responsible. <span className="text-highlight">Competitive.</span>{" "}
+    Building Responsible. <span className="text-highlight2">Competitive.</span>{" "}
     Future-Ready Businesses.
   </>,
   <>
     Grow Your Business. Access New Markets.{" "}
-    <span className="text-highlight">Build a Sustainable India.</span>
+    <span className="text-highlight3">Build a Sustainable India.</span>
   </>,
   <>
     Grow Faster. Go Global, Make ESG Your{" "}
-    <span className="text-highlight">Competitive Advantage</span>
+    <span className="text-highlight2">Competitive Advantage</span>
   </>,
   <>
     Powering MSME Growth Through{" "}
-    <span className="text-highlight">ESG, Innovation</span> & Global Market
+    <span className="text-highlight3">ESG, Innovation</span> & Global Market
     Access.
   </>,
   <>
     Grow Your Business.{" "}
-    <span className="text-highlight">Access Export Market</span>
+    <span className="text-highlight1">Access Export Market</span>
   </>,
 ];
 

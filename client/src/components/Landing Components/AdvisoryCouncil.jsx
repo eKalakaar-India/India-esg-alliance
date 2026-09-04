@@ -45,6 +45,50 @@ const advisoryMembers = [
     image: "",
     linkedin: "https://linkedin.com",
   },
+  {
+  id: 5,
+  name: "Shri Mashar Velapurath",
+  designation: "Managing Director",
+  organization: "AFC India",
+  description:
+    "Experienced leader in agriculture and rural development with expertise in policy engagement, project management and technical consultancy.",
+  image: "",
+  linkedin: "https://linkedin.com",
+},
+
+{
+  id: 6,
+  name: "Shri Ashok Sethi",
+  designation: "Ex-Chairman, TCE & Ex-Director, Tata Power",
+  organization: "Tata Power / Tata Consulting Engineers",
+  description:
+    "Power sector veteran with over four decades of experience in strategic operations, regulatory advocacy, energy infrastructure and business growth.",
+  image: "",
+  linkedin: "https://linkedin.com",
+},
+
+{
+  id: 7,
+  name: "Col. Prakash Tewari (Retd.)",
+  designation:
+    "Member, Expert Appraisal Committee, Ministry of Environment, Forest & Climate Change",
+  organization: "Government of India",
+  description:
+    "Army veteran and sustainability leader with extensive experience in CSR, social impact, education and environmental initiatives.",
+  image: "",
+  linkedin: "https://linkedin.com",
+},
+
+{
+  id: 8,
+  name: "Shri P. Udayakumar",
+  designation: "Ex-Chairman & Managing Director",
+  organization: "National Small Industries Corporation (NSIC)",
+  description:
+    "Experienced MSME leader with expertise in strategic planning, marketing, enterprise development and growth support for small industries.",
+  image: "",
+  linkedin: "https://linkedin.com",
+},
 ];
 
 const AdvisoryCouncil = () => {

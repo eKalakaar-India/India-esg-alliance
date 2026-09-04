@@ -68,3 +68,40 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+| Role             | Hex       |
+| ---------------- | --------- |
+| Primary          | #0F2747 |
+| Primary Dark     | #0A1B33 |
+| Environmental    | #166534 |
+| Social           | #EA7A2F |
+| Governance       | #2563EB |
+| Teal Accent      | #2F7F7B |
+| Heading          | #172033 |
+| Body Text        | #475569 |
+| Muted Text       | #64748B |
+| Border           | #E2E8F0 |
+| Light Background | #F8FAFC |
+| Off White        | #FAF9F6 |
+| White            | #FFFFFF |
+
+
+
+Navy       #0F2747
+Forest     #166534
+Teal       #2F7F7B
+Cobalt     #2563EB
+Orange     #EA7A2F
+Coral      #E76F61
+Sand       #D6B98C
+Slate      #475569
+Light BG   #F8FAFC
+Off White  #FAF9F6
+White      #FFFFFF
+
+E → #166534 🌿
+S → #EA7A2F 🤝
+G → #2563EB 🏛️
+
+with #0F2747 navy as the overall brand/heading color and #2F7F7B teal as the connecting ESG accent.

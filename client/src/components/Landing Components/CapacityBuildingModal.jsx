@@ -9,6 +9,9 @@ import {
   FaFileAlt,
   FaUsers,
   FaIndustry,
+  FaGlobe,
+  FaTrophy,
+  FaLightbulb
 } from "react-icons/fa";
 
 const alignmentPoints = [
@@ -80,34 +83,60 @@ const programModules = [
       "Actionable improvement roadmaps & transition plans",
     ],
   },
+  {
+  id: "business-innovation",
+  icon: <FaLightbulb />,
+  badge: "Business & Innovation",
+  title: "ESG Business & Innovation Solutions",
+  desc: "Practical, expert-led solutions that help organisations turn ESG challenges into opportunities for resilience, innovation, competitive advantage and sustainable growth.",
+  focusAreas: [
+    "Expert empanelment & domain specialist networks",
+    "Industry advisory clinics & strategic consultations",
+    "ESG innovation hackathons & student competitions",
+    "Technology-enabled sustainability pilot projects",
+    "Development of sustainable and commercially viable business solutions",
+  ],
+},
+
+{
+  id: "esg-summit-awards",
+  icon: <FaTrophy />,
+  badge: "Ecosystem & Recognition",
+  title: "Annual ESG Summit & Awards for Excellence",
+  desc: "A flagship platform bringing together industry, government, academia, experts and ecosystem partners to advance ESG dialogue, collaboration, leadership and innovation.",
+  focusAreas: [
+    "Strategic ESG dialogue & knowledge exchange",
+    "Industry best-practice sharing",
+    "Recognition of ESG leadership & innovation",
+    "Sector-specific ESG awards with transparent methodology",
+    "Independent jury & credible evaluation framework",
+    "Replicable ESG case studies for wider adoption",
+  ],
+},
+
+// {
+//   id: "integrated-esg-ecosystem",
+//   icon: <FaGlobe />,
+//   badge: "Integrated ESG Ecosystem",
+//   title: "End-to-End ESG Support & Capacity Building",
+//   desc: "An integrated ecosystem combining training, reporting support, assessment, advisory and policy advocacy to help organisations strengthen capabilities, compliance, credibility and long-term sustainable value.",
+//   focusAreas: [
+//     "ESG training & internal capability building",
+//     "Reporting support & compliance readiness",
+//     "ESG assessments and organisational evaluations",
+//     "Strategic advisory & implementation support",
+//     "Policy advocacy & ecosystem collaboration",
+//     "Long-term sustainability, competitiveness & global alignment",
+//   ],
+// },
 ];
 
-const CapacityBuildingModal = ({ isOpen, onClose }) => {
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (e.key === "Escape") onClose();
-    };
+const CapacityBuildingModal = () => {
 
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-      window.addEventListener("keydown", handleKeyDown);
-    }
-
-    return () => {
-      document.body.style.overflow = "unset";
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [isOpen, onClose]);
-
-  if (!isOpen) return null;
 
   return (
-    <div className="cbm-overlay" onClick={onClose}>
       <div
         className="cbm-modal"
-        role="dialog"
-        aria-modal="true"
-        onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
         <div className="cbm-header">
@@ -115,13 +144,6 @@ const CapacityBuildingModal = ({ isOpen, onClose }) => {
             <span className="cbm-tag">IEA Framework</span>
             <h2 className="cbm-title">Capacity Building & Training</h2>
           </div>
-          <button
-            className="cbm-close-btn"
-            onClick={onClose}
-            aria-label="Close modal"
-          >
-            <FaTimes />
-          </button>
         </div>
 
         {/* Content Body */}
@@ -199,18 +221,7 @@ const CapacityBuildingModal = ({ isOpen, onClose }) => {
             ))}
           </div>
         </div>
-
-        {/* Modal Footer */}
-        <div className="cbm-footer">
-          <button className="cbm-btn-secondary" onClick={onClose}>
-            Close
-          </button>
-          {/* <button className="cbm-btn-primary" onClick={onClose}>
-            Inquire About Programs
-          </button> */}
-        </div>
       </div>
-    </div>
   );
 };
 
