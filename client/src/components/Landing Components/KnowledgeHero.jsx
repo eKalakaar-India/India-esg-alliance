@@ -89,7 +89,7 @@ const KnowledgeHub = () => {
             </div>
           </div>
 
-          <div className="kh-content">
+          <div className="kh-content" id="handbook">
             {filteredResources.length > 0 ? (
               filteredResources.map((item) => (
                 <div

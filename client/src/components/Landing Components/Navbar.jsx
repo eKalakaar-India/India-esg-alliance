@@ -290,8 +290,38 @@ const Navbar = () => {
             </a>
           </li>
 
-          <li>
-            <NavLink to="/knowledgehub" className={({ isActive }) => (isActive ? "active" : "")}>Knowledge Hub</NavLink>
+          <li className="nav-item knowledge-dropdown">
+            <NavLink to="/knowledgehub" className={({ isActive }) => `knowledge-link ${isActive ? "active" : ""}`}>Knowledge Hub <span className="knowledgearrow">▼</span></NavLink>
+            <ul className="knowledge-dropdown-menu">
+              <li>
+                <HashLink smooth to="/knowledgehub#handbook" scroll={(el) => el.scrollIntoView({ behavior: "smooth", block: "start" })}>
+                  IEA Hand Book
+                </HashLink>
+              </li>
+              <li>
+                <HashLink smooth to="/knowledgehub#research" scroll={(el) => el.scrollIntoView({ behavior: "smooth", block: "start" })}>
+                 IEA Research Papers
+                </HashLink>
+              </li>
+
+              <li>
+                <HashLink smooth to="/knowledgehub#policy" scroll={(el) => el.scrollIntoView({ behavior: "smooth", block: "start" })}>
+                  Govt. Policies
+                </HashLink>
+              </li>
+
+              <li>
+                <HashLink smooth to="/knowledgehub#blogs" scroll={(el) => el.scrollIntoView({ behavior: "smooth", block: "start" })}>
+                  IEA Blogs
+                </HashLink>
+              </li>
+
+              <li>
+                <HashLink smooth to="/knowledgehub#newsletter" scroll={(el) => el.scrollIntoView({ behavior: "smooth", block: "start" })}>
+                  IEA NewsLetter
+                </HashLink>
+              </li>
+            </ul>
           </li>
 
           <li>
