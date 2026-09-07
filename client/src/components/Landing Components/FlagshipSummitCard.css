@@ -66,18 +66,8 @@
   line-height: 1.4;
 }
 
-.bar-lead-title {
-  font-weight: 700;
-  color: #0d2813;
-}
-
 .bar-divider {
   color: #9fb29a;
-}
-
-.bar-sub-desc {
-  color: #556250;
-  font-size: 12.5px;
 }
 
 .bar-right {
@@ -121,44 +111,122 @@
 }
 
 /* =====================================
-   LEFT: IMAGE WRAPPER
+   LEFT: IMAGE & CAROUSEL VIEWPORT
 ===================================== */
 .flagship-image-box {
   position: relative;
   border-radius: 14px;
   overflow: hidden;
   height: 100%;
-  min-height: 320px;
-  background-color: #eaf0e8;
+  min-height: 340px;
+  background-color: #0b1a0e;
+}
+
+/* Viewport for stacked slide images */
+.carousel-slide-viewport {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.7s ease-in-out, transform 1.2s ease-out;
+  transform: scale(1.02);
+  display: block;
+}
+
+.carousel-img.active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 1;
 }
 
 .image-conclave-badge {
   position: absolute;
   top: 14px;
   left: 14px;
-  background: rgba(235, 240, 236, 0.88);
+  background: rgba(235, 240, 236, 0.92);
   font-size: 10px;
   letter-spacing: 0.9px;
   font-weight: 700;
   padding: 5px 11px;
   border-radius: 6px;
   backdrop-filter: blur(4px);
-  z-index: 2;
+  z-index: 3;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  color: #0d2813;
 }
 
-.flagship-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.4s ease;
+/* Prev / Next Navigation Arrows */
+.carousel-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(4px);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
-.flagship-image-box:hover .flagship-img {
-  transform: scale(1.025);
+.carousel-nav-btn:hover {
+  background: rgba(0, 69, 13, 0.9);
+  transform: translateY(-50%) scale(1.08);
 }
 
+.carousel-nav-btn.prev {
+  left: 10px;
+}
+
+.carousel-nav-btn.next {
+  right: 10px;
+}
+
+/* Pagination Dots Indicator */
+.carousel-dots-wrapper {
+  position: absolute;
+  bottom: 54px; /* Positioned cleanly above bottom meta bar */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  z-index: 3;
+}
+
+.carousel-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(255, 255, 255, 0.45);
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.carousel-dot.active {
+  width: 18px;
+  background: #a0f399;
+}
+
+/* Footer Gradient & Location Metadata */
 .image-footer-meta {
   position: absolute;
   bottom: 0;
@@ -408,8 +476,8 @@
   }
 
   .flagship-image-box {
-    min-height: 250px;
-    max-height: 320px;
+    min-height: 280px;
+    height: 320px;
   }
 }
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   FaCalendarAlt,
   FaMapMarkerAlt,
@@ -6,12 +6,51 @@ import {
   FaArrowRight,
   FaShieldAlt,
   FaCertificate,
+  FaChevronLeft,
+  FaChevronRight,
 } from "react-icons/fa";
 import "./FlagshipSummitCard.css";
+import national1 from "../../assets/natinal1.jpeg";
+import national2 from "../../assets/natinal2.jpeg";
+import national3 from "../../assets/natinal3.jpeg";
+import national4 from "../../assets/natinal4.jpeg";
+import national5 from "../../assets/natinal5.jpeg";
+import national6 from "../../assets/natinal6.jpeg";
+import national7 from "../../assets/natinal7.jpeg";
+
+const carouselImages = [
+  { src: national1, alt: "National Summit Conclave Overview 1" },
+  { src: national2, alt: "National Summit Keynote Session 2" },
+  { src: national3, alt: "National Summit Panel Discussion 3" },
+  { src: national4, alt: "National Summit Regulatory Roundtables 4" },
+  { src: national5, alt: "National Summit Industry Delegation 5" },
+  { src: national6, alt: "National Summit Executive Workshop 6" },
+  { src: national7, alt: "National Summit Networking & Assembly 7" },
+];
 
 export default function FlagshipSummitCard() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Auto-advance slides every 3.5 seconds
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % carouselImages.length);
+    }, 3500);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  const handlePrev = () => {
+    setCurrentIndex((prev) =>
+      prev === 0 ? carouselImages.length - 1 : prev - 1
+    );
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prev) => (prev + 1) % carouselImages.length);
+  };
+
   const handleBrochureDownload = () => {
-    // Triggers direct brochure download
     const link = document.createElement("a");
     link.href = "/pdfs/India-ESG-Summit-Brochure-2026.pdf";
     link.download = "India-ESG-National-Summit-2026-Brochure.pdf";
@@ -50,15 +89,58 @@ export default function FlagshipSummitCard() {
 
       {/* Main Grid: Media & Content */}
       <div className="flagship-content-grid">
-        {/* Left: Image with Overlaid Metadata */}
+        {/* Left: Interactive Carousel Box */}
         <div className="flagship-image-box">
           <div className="image-conclave-badge">ANNUAL FLAGSHIP CONCLAVE</div>
-          <img
-            src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1000"
-            alt="India ESG National Summit Assembly Hall"
-            className="flagship-img"
-            loading="lazy"
-          />
+
+          <div className="carousel-slide-viewport">
+            {carouselImages.map((item, index) => (
+              <img
+                key={index}
+                src={item.src}
+                alt={item.alt}
+                className={`flagship-img carousel-img ${
+                  index === currentIndex ? "active" : ""
+                }`}
+                loading={index === 0 ? "eager" : "lazy"}
+              />
+            ))}
+          </div>
+
+          {/* Carousel Arrows */}
+          <button
+            type="button"
+            className="carousel-nav-btn prev"
+            onClick={handlePrev}
+            aria-label="Previous Slide"
+          >
+            <FaChevronLeft />
+          </button>
+          <button
+            type="button"
+            className="carousel-nav-btn next"
+            onClick={handleNext}
+            aria-label="Next Slide"
+          >
+            <FaChevronRight />
+          </button>
+
+          {/* Carousel Indicator Dots */}
+          <div className="carousel-dots-wrapper">
+            {carouselImages.map((_, dotIndex) => (
+              <button
+                key={dotIndex}
+                type="button"
+                className={`carousel-dot ${
+                  dotIndex === currentIndex ? "active" : ""
+                }`}
+                onClick={() => setCurrentIndex(dotIndex)}
+                aria-label={`Go to slide ${dotIndex + 1}`}
+              />
+            ))}
+          </div>
+
+          {/* Meta Overlay */}
           <div className="image-footer-meta">
             <div className="meta-item">
               <FaCalendarAlt className="meta-icon" />
@@ -142,7 +224,7 @@ export default function FlagshipSummitCard() {
                 window.open(
                   "https://www.indiaesgsummit.com/",
                   "_blank",
-                  "noopener,noreferrer",
+                  "noopener,noreferrer"
                 )
               }
             >
