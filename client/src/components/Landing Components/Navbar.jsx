@@ -258,7 +258,7 @@ const Navbar = () => {
                     el.scrollIntoView({ behavior: "smooth", block: "start" })
                   }
                 >
-                  Board of Directors
+                  Directors
                 </HashLink>
               </li>
 
@@ -274,6 +274,15 @@ const Navbar = () => {
                 </HashLink>
               </li>
             </ul>
+          </li>
+
+          <li>
+            <NavLink
+              to="/contactus"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Digital Platform for MSMEs & Industries
+            </NavLink>
           </li>
 
           {/* Our Services Dropdown */}

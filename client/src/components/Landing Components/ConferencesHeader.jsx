@@ -2,11 +2,11 @@ import React from "react";
 import "./ConferencesHeader.css";
 
 const filterTabs = [
-  { id: "all", label: "All Summits & Programs" },
+  { id: "all", label: "National Summits & Programs" },
   { id: "flagship", label: "Flagship Assemblies" },
   { id: "certifications", label: "Certifications & Masterclasses" },
   { id: "state", label: "State Chapters (State Summits)" },
-  { id: "national", label: "National All-Chapter Meet" },
+  { id: "national", label: "Awards and Recognition" },
 ];
 
 export default function ConferencesHeader({ activeTab, setActiveTab }) {
