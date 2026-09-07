@@ -1,0 +1,203 @@
+.state-summits-wrapper {
+  width: 100%;
+  margin-top: 36px;
+  margin-bottom: 40px;
+  box-sizing: border-box;
+}
+
+.section-head-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.title-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-icon-symbol {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #00450d;
+  flex-shrink: 0;
+  line-height: 0; /* Prevents inline font baseline spacing */
+}
+
+.section-icon-symbol svg {
+  display: block; /* Removes default SVG bottom inline gap */
+}
+
+.section-main-heading {
+  font-size: 24px;
+  font-weight: 800;
+  color: #121811;
+  margin: 0;
+  line-height: 1; /* Aligns text box directly with the 22-24px icon height */
+  letter-spacing: -0.3px;
+}
+
+.section-subtitle {
+  font-size: 13.5px;
+  color: #535c4f;
+  margin: 6px 0 0 0;
+}
+
+.link-all-chapters {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #00450d;
+  text-decoration: none;
+  letter-spacing: 0.8px;
+  transition: gap 0.2s ease;
+}
+
+.link-all-chapters:hover {
+  gap: 10px;
+  text-decoration: underline;
+}
+
+/* ================= 4-CARD GRID ================= */
+.state-chapters-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.state-conclave-card {
+  background: #ffffff;
+  border: 1px solid #dfe5dc;
+  border-radius: 14px;
+  padding: 18px 18px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.state-conclave-card:hover {
+  transform: translateY(-3px);
+  border-color: #a2c49c;
+  box-shadow: 0 8px 22px rgba(0, 69, 13, 0.08);
+}
+
+.chapter-meta-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.chapter-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #eef7ee;
+  color: #004d13;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.badge-ico {
+  font-size: 11px;
+}
+
+.chapter-date {
+  font-size: 11.5px;
+  color: #636c5f;
+  font-weight: 500;
+}
+
+.chapter-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #121811;
+  margin: 0 0 10px 0;
+  line-height: 1.35;
+}
+
+.chapter-focus-desc {
+  font-size: 12px;
+  color: #555e51;
+  line-height: 1.55;
+  margin: 0 0 18px 0;
+  flex-grow: 1;
+}
+
+.focus-label {
+  font-weight: 600;
+  color: #3b4237;
+}
+
+.chapter-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  border-top: 1px solid #f0f4ee;
+}
+
+.attendee-counter {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #004d13;
+}
+
+.user-icon {
+  font-size: 12px;
+}
+
+.btn-view-chapter {
+  background: #f1f5ef;
+  border: 1px solid #dce4d9;
+  color: #1e261d;
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.btn-view-chapter:hover {
+  background: #00450d;
+  border-color: #00450d;
+  color: #ffffff;
+}
+
+.view-arrow {
+  font-size: 10px;
+}
+
+@media (max-width: 1150px) {
+  .state-chapters-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .state-chapters-grid {
+    grid-template-columns: 1fr;
+  }
+}

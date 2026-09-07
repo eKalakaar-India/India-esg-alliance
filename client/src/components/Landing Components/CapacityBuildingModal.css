@@ -1,5 +1,3 @@
-
-
 /* Modal Window */
 .cbm-modal {
   background: #ffffff;
@@ -35,7 +33,7 @@
   margin: 4px 0 0 0;
   font-size: 36px;
   font-weight: 700;
-  color: #0F2747;
+  color: #0f2747;
 }
 
 .cbm-close-btn {
@@ -163,7 +161,7 @@
   margin: 0;
   font-size: 22px;
   font-weight: 700;
-  color: #EA7A2F;
+  color: #ea7a2f;
   line-height: 1.3;
 }
 
@@ -172,7 +170,7 @@
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
-  color: #2F7F7B;
+  color: #2f7f7b;
 }
 
 .cbm-focus-section {

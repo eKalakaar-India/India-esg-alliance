@@ -8,29 +8,21 @@ import { searchableContent } from "../../data/searchIndex";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-
   const [selected, setSelected] = useState("English");
-
   const [searchQuery, setSearchQuery] = useState("");
-
   const [searchResults, setSearchResults] = useState([]);
-
   const [showResults, setShowResults] = useState(false);
 
   const dropdownRef = useRef(null);
-
   const searchContainerRef = useRef(null);
-
   const navigate = useNavigate();
 
   // Close menus when clicking outside
-
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
         setOpen(false);
       }
-
       if (
         searchContainerRef.current &&
         !searchContainerRef.current.contains(e.target)
@@ -40,15 +32,12 @@ const Navbar = () => {
     };
 
     document.addEventListener("mousedown", handleClickOutside);
-
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   // Filter content across titles and keywords
-
   const handleSearchChange = (e) => {
     const query = e.target.value;
-
     setSearchQuery(query);
 
     if (query.trim().length > 1) {
@@ -58,27 +47,21 @@ const Navbar = () => {
           item.keywords.toLowerCase().includes(query.toLowerCase()) ||
           item.category.toLowerCase().includes(query.toLowerCase()),
       );
-
       setSearchResults(filtered);
-
       setShowResults(true);
     } else {
       setSearchResults([]);
-
       setShowResults(false);
     }
   };
 
   const handleSelectResult = (item) => {
     setShowResults(false);
-
     setSearchQuery("");
 
     if (item.external) {
       window.open(item.path, "_blank", "noopener,noreferrer");
     } else if (item.path.includes("#")) {
-      // HashLink-compatible route
-
       navigate(item.path);
     } else {
       navigate(item.path);
@@ -91,13 +74,9 @@ const Navbar = () => {
         <div
           style={{
             display: "flex",
-
             alignItems: "center",
-
             justifyContent: "center",
-
             gap: "10px",
-
             cursor: "pointer",
           }}
         >
@@ -113,7 +92,6 @@ const Navbar = () => {
 
         <div className="nav-btns">
           {/* Global Search Container */}
-
           <div className="searchbar-wrapper" ref={searchContainerRef}>
             <div className="searchbar">
               <input
@@ -133,7 +111,6 @@ const Navbar = () => {
                   className="search-clear-btn"
                   onClick={() => {
                     setSearchQuery("");
-
                     setShowResults(false);
                   }}
                 >
@@ -145,7 +122,6 @@ const Navbar = () => {
             </div>
 
             {/* Live Search Results Modal/Dropdown */}
-
             {showResults && (
               <div className="search-results-box">
                 {searchResults.length > 0 ? (
@@ -157,7 +133,6 @@ const Navbar = () => {
                     >
                       <div className="result-text">
                         <span className="result-title">{item.title}</span>
-
                         <span className="result-cat">{item.category}</span>
                       </div>
 
@@ -178,13 +153,9 @@ const Navbar = () => {
           <div
             style={{
               display: "flex",
-
               justifyContent: "space-between",
-
               alignItems: "center",
-
               width: "30%",
-
               gap: "12px",
             }}
           >
@@ -196,19 +167,16 @@ const Navbar = () => {
               >
                 <div className="left">
                   <span className="icon">🌐</span>
-
                   <span>{selected}</span>
                 </div>
-
                 <span className={`arrow ${open ? "rotate" : ""}`}>▼</span>
               </button>
 
               <div className={`dropdown-menu ${open ? "show" : ""}`}>
                 <div
-                  className={`dropdown-item ${selected === "Eng" ? "active" : ""}`}
+                  className={`dropdown-item ${selected === "English" ? "active" : ""}`}
                   onClick={() => {
                     setSelected("English");
-
                     setOpen(false);
                   }}
                 >
@@ -216,10 +184,9 @@ const Navbar = () => {
                 </div>
 
                 <div
-                  className={`dropdown-item ${selected === "Hin" ? "active" : ""}`}
+                  className={`dropdown-item ${selected === "Hindi" ? "active" : ""}`}
                   onClick={() => {
                     setSelected("Hindi");
-
                     setOpen(false);
                   }}
                 >
@@ -238,64 +205,279 @@ const Navbar = () => {
       <div className="nav-items">
         <ul type="none" className="nav-list">
           <li>
-            <NavLink to="/home" className={({ isActive }) => (isActive ? "active" : "")}>Home</NavLink>
+            <NavLink
+              to="/home"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Home
+            </NavLink>
           </li>
 
+          {/* About Dropdown */}
           <li className="nav-item about-dropdown">
-            <NavLink to="/about" className={({ isActive }) =>
-              `about-link ${isActive ? "active" : ""}`
-            }>
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                `about-link ${isActive ? "active" : ""}`
+              }
+            >
               About
               <span className="aboutarrow">▼</span>
             </NavLink>
 
             <ul className="about-dropdown-menu">
               <li>
-                <HashLink smooth to="/about#vision" scroll={(el) => el.scrollIntoView({ behavior: "smooth", block: "start" })}>
+                <HashLink
+                  smooth
+                  to="/about#vision"
+                  scroll={(el) =>
+                    el.scrollIntoView({ behavior: "smooth", block: "start" })
+                  }
+                >
                   Vision
                 </HashLink>
               </li>
 
               <li>
-                <HashLink smooth to="/about#mission" scroll={(el) => el.scrollIntoView({ behavior: "smooth", block: "start" })}>
+                <HashLink
+                  smooth
+                  to="/about#mission"
+                  scroll={(el) =>
+                    el.scrollIntoView({ behavior: "smooth", block: "start" })
+                  }
+                >
                   Mission
                 </HashLink>
               </li>
 
               <li>
-                <HashLink smooth to="/about#board-of-directors" scroll={(el) => el.scrollIntoView({ behavior: "smooth", block: "start" })}>
+                <HashLink
+                  smooth
+                  to="/about#board-of-directors"
+                  scroll={(el) =>
+                    el.scrollIntoView({ behavior: "smooth", block: "start" })
+                  }
+                >
                   Board of Directors
                 </HashLink>
               </li>
 
               <li>
-                <HashLink smooth to="/about#board-of-advisors" scroll={(el) => el.scrollIntoView({ behavior: "smooth", block: "start" })}>
+                <HashLink
+                  smooth
+                  to="/about#board-of-advisors"
+                  scroll={(el) =>
+                    el.scrollIntoView({ behavior: "smooth", block: "start" })
+                  }
+                >
                   Advisory Council
                 </HashLink>
               </li>
             </ul>
           </li>
 
-          <li>
-            <NavLink to="/solutions" className={({ isActive }) => (isActive ? "active" : "")}>Our Services</NavLink>
+          {/* Our Services Dropdown */}
+          <li className="nav-item about-dropdown">
+            <NavLink
+              to="/solutions"
+              className={({ isActive }) =>
+                `about-link ${isActive ? "active" : ""}`
+              }
+            >
+              Our Services
+              <span className="aboutarrow">▼</span>
+            </NavLink>
+
+            <ul className="about-dropdown-menu">
+              <li>
+                <HashLink
+                  smooth
+                  to="/solutions#board-cxo"
+                  scroll={(el) =>
+                    el.scrollIntoView({ behavior: "smooth", block: "start" })
+                  }
+                >
+                  Board &amp; CXO ESG Leadership Program
+                </HashLink>
+              </li>
+
+              <li>
+                <HashLink
+                  smooth
+                  to="/solutions#foundational"
+                  scroll={(el) =>
+                    el.scrollIntoView({ behavior: "smooth", block: "start" })
+                  }
+                >
+                  Foundational ESG Program
+                </HashLink>
+              </li>
+
+              <li>
+                <HashLink
+                  smooth
+                  to="/solutions#roundtables"
+                  scroll={(el) =>
+                    el.scrollIntoView({ behavior: "smooth", block: "start" })
+                  }
+                >
+                  Monthly ESG Roundtables &amp; Sector Modules
+                </HashLink>
+              </li>
+
+              <li>
+                <HashLink
+                  smooth
+                  to="/solutions#reporting-solutions"
+                  scroll={(el) =>
+                    el.scrollIntoView({ behavior: "smooth", block: "start" })
+                  }
+                >
+                  ESG Reporting Solutions &amp; Audits
+                </HashLink>
+              </li>
+
+              <li>
+                <HashLink
+                  smooth
+                  to="/solutions#reverse-buyer-seller"
+                  scroll={(el) =>
+                    el.scrollIntoView({ behavior: "smooth", block: "start" })
+                  }
+                >
+                  Reverse Buyers–Sellers Meet for Export Promotion
+                </HashLink>
+              </li>
+
+              <li>
+                <HashLink
+                  smooth
+                  to="/solutions#business-innovation"
+                  scroll={(el) =>
+                    el.scrollIntoView({ behavior: "smooth", block: "start" })
+                  }
+                >
+                  ESG Business &amp; Innovation Solutions
+                </HashLink>
+              </li>
+
+              <li>
+                <HashLink
+                  smooth
+                  to="/solutions#esg-summit-awards"
+                  scroll={(el) =>
+                    el.scrollIntoView({ behavior: "smooth", block: "start" })
+                  }
+                >
+                  Annual ESG Summit &amp; Awards for Excellence
+                </HashLink>
+              </li>
+
+              <li>
+                <HashLink
+                  smooth
+                  to="/solutions#women-founders-mdp"
+                  scroll={(el) =>
+                    el.scrollIntoView({ behavior: "smooth", block: "start" })
+                  }
+                >
+                  Management Development Program for Women Founders
+                </HashLink>
+              </li>
+
+              <li>
+                <HashLink
+                  smooth
+                  to="/solutions#leadership-webinar-series"
+                  scroll={(el) =>
+                    el.scrollIntoView({ behavior: "smooth", block: "start" })
+                  }
+                >
+                  IEA Leadership Webinar Series
+                </HashLink>
+              </li>
+            </ul>
           </li>
 
-          <li>
-            <a
-              href="https://www.indiaesgsummit.com/"
-              target="_blank"
-              rel="noopener noreferrer"
+          {/* Events Dropdown */}
+          <li className="nav-item about-dropdown">
+            <NavLink
+              to="/events"
+              className={({ isActive }) =>
+                `about-link ${isActive ? "active" : ""}`
+              }
             >
               Events
-            </a>
+              <span className="aboutarrow">▼</span>
+            </NavLink>
+
+            <ul className="about-dropdown-menu">
+              <li>
+                <HashLink
+                  smooth
+                  to="/events#training-programs"
+                  scroll={(el) =>
+                    el.scrollIntoView({ behavior: "smooth", block: "start" })
+                  }
+                >
+                  Training programs
+                </HashLink>
+              </li>
+
+              <li>
+                <HashLink
+                  smooth
+                  to="/events#national-summit"
+                  scroll={(el) =>
+                    el.scrollIntoView({ behavior: "smooth", block: "start" })
+                  }
+                >
+                  India ESG (National) Summit
+                </HashLink>
+              </li>
+
+              <li>
+                <HashLink
+                  smooth
+                  to="/events#state-summits"
+                  scroll={(el) =>
+                    el.scrollIntoView({ behavior: "smooth", block: "start" })
+                  }
+                >
+                  India ESG (State) Summit
+                </HashLink>
+              </li>
+
+              <li>
+                <HashLink
+                  smooth
+                  to="/events#awards"
+                  scroll={(el) =>
+                    el.scrollIntoView({ behavior: "smooth", block: "start" })
+                  }
+                >
+                  Awards and Recognition
+                </HashLink>
+              </li>
+            </ul>
           </li>
 
           <li>
-            <NavLink to="/knowledgehub" className={({ isActive }) => (isActive ? "active" : "")}>Knowledge Hub</NavLink>
+            <NavLink
+              to="/knowledgehub"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Knowledge Hub
+            </NavLink>
           </li>
 
           <li>
-            <NavLink to="/contactus" className={({ isActive }) => (isActive ? "active" : "")}>Contact Us</NavLink>
+            <NavLink
+              to="/contactus"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Contact Us
+            </NavLink>
           </li>
         </ul>
       </div>
