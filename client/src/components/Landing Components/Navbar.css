@@ -302,8 +302,18 @@
 .about-dropdown {
   position: relative;
 }
+.knowledge-dropdown {
+  position: relative;
+}
 
 .about-link {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+}
+.knowledge-link {
   display: flex;
 
   align-items: center;
@@ -320,6 +330,18 @@
 /* Rotate Arrow */
 
 .about-dropdown:hover .aboutarrow {
+  transform: rotate(180deg);
+}
+
+.knowledgearrow {
+  font-size: 10px;
+
+  transition: 0.3s;
+}
+
+/* Rotate Arrow */
+
+.knowledge-dropdown:hover .knowledgearrow {
   transform: rotate(180deg);
 }
 
@@ -394,6 +416,83 @@
 }
 
 .about-dropdown-menu li a:hover {
+  background: #eef7ef;
+
+  color: #00450d;
+
+  padding-left: 28px;
+}
+/* Dropdown */
+
+.knowledge-dropdown-menu {
+  position: absolute;
+
+  top: calc(100% + 12px);
+
+  left: 0;
+
+  width: 250px;
+
+  padding: 10px 0;
+
+  margin: 0;
+
+  background: white;
+
+  border-radius: 14px;
+
+  list-style: none;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transform: translateY(10px);
+
+  transition: 0.25s ease;
+
+  z-index: 999;
+}
+
+/* Show Dropdown */
+
+.knowledge-dropdown:hover .knowledge-dropdown-menu {
+  opacity: 1;
+
+  visibility: visible;
+
+  transform: translateY(0);
+}
+
+.knowledge-dropdown-menu li {
+  width: 100%;
+
+  padding: 0;
+
+  margin: 0;
+}
+
+/* Remove underline animation inside dropdown */
+
+.knowledge-dropdown-menu li::after {
+  display: none;
+}
+
+.knowledge-dropdown-menu li a {
+  display: block;
+
+  padding: 14px 22px;
+
+  color: #444650;
+
+  text-decoration: none;
+
+  transition: 0.25s;
+}
+
+.knowledge-dropdown-menu li a:hover {
   background: #eef7ef;
 
   color: #00450d;
