@@ -12,6 +12,7 @@ import SolutionPage from "./Pages/LandingPages/SolutionPage";
 import KnowledgeHub from "./Pages/LandingPages/KnowledgeHub";
 import ContactUsPage from "./Pages/LandingPages/ContactUsPage";
 import ScrollToTop from "./components/Landing Components/ScrollToTop";
+import EventsPage from "./Pages/LandingPages/EventsPage";
 
 function App() {
   const navigate = useNavigate();
@@ -48,6 +49,7 @@ function App() {
         <Route path="/solutions" element={<SolutionPage />} />
         <Route path="/knowledgehub" element={<KnowledgeHub />} />
         <Route path="/contactus" element={<ContactUsPage />} />
+        <Route path="/events" element={<EventsPage />} />
       </Routes>
     </div>
   );
