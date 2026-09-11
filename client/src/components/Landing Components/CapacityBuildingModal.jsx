@@ -12,8 +12,16 @@ import {
   FaLightbulb,
   FaHandshake,
   FaFemale,
-  FaVideo,
 } from "react-icons/fa";
+
+import img1 from "../../assets/board-cxo.png";
+import img2 from "../../assets/esg-program.png";
+import img3 from "../../assets/roundtables.png";
+import img4 from "../../assets/audits.png";
+import img5 from "../../assets/buyers–sellers.png";
+import img6 from "../../assets/business-and-innovation.png";
+import img7 from "../../assets/summit-and-awards.png";
+import img8 from "../../assets/mdpw.png";
 
 const alignmentPoints = [
   "SEBI BRSR & BRSR Core",
@@ -26,6 +34,8 @@ const alignmentPoints = [
 const programModules = [
   {
     id: "board-cxo",
+    image: img1,
+    imageAlt: "Board & CXO ESG Leadership Program",
     icon: <FaUserTie />,
     badge: "Executive Leadership",
     title: "Board & CXO ESG Leadership Program",
@@ -40,6 +50,8 @@ const programModules = [
   },
   {
     id: "foundational",
+    image: img2,
+    imageAlt: "Foundational ESG Program",
     icon: <FaAward />,
     badge: "Flagship • One-Day",
     title: "Foundational ESG Program",
@@ -56,6 +68,8 @@ const programModules = [
   },
   {
     id: "roundtables",
+    image: img3,
+    imageAlt: "Monthly ESG Roundtables & Sector Modules",
     icon: <FaComments />,
     badge: "Monthly Series",
     title: "Monthly ESG Roundtables & Sector Modules",
@@ -72,6 +86,8 @@ const programModules = [
   },
   {
     id: "reporting-solutions",
+    image: img4,
+    imageAlt: "ESG Reporting Solutions & Audits",
     icon: <FaFileAlt />,
     badge: "Assessments & Assurance",
     title: "ESG Reporting Solutions & Audits",
@@ -86,6 +102,8 @@ const programModules = [
   },
   {
     id: "reverse-buyer-seller",
+    image: img5,
+    imageAlt: "Reverse Buyers–Sellers Meet for Export Promotion",
     icon: <FaHandshake />,
     badge: "Export Promotion & B2B Matchmaking",
     title: "Reverse Buyers–Sellers Meet for Export Promotion",
@@ -102,6 +120,8 @@ const programModules = [
   },
   {
     id: "business-innovation",
+    image: img6,
+    imageAlt: "ESG Business & Innovation Solutions",
     icon: <FaLightbulb />,
     badge: "Business & Innovation",
     title: "ESG Business & Innovation Solutions",
@@ -116,6 +136,8 @@ const programModules = [
   },
   {
     id: "esg-summit-awards",
+    image: img7,
+    imageAlt: "Annual ESG Summit & Awards for Excellence",
     icon: <FaTrophy />,
     badge: "Ecosystem & Recognition",
     title: "Annual ESG Summit & Awards for Excellence",
@@ -131,6 +153,8 @@ const programModules = [
   },
   {
     id: "women-founders-mdp",
+    image: img8,
+    imageAlt: "Management Development Program for Women Founders",
     icon: <FaFemale />,
     badge: "Leadership & Enterprise Growth",
     title: "Management Development Program for Women Founders",
@@ -143,21 +167,6 @@ const programModules = [
       "Peer-learning networks for growth-ready women-led enterprises",
     ],
     targetGroup: "Women Founders, Co-founders, & Women-led Enterprise Leaders",
-  },
-  {
-    id: "leadership-webinar-series",
-    icon: <FaVideo />,
-    badge: "Continuous Knowledge Series",
-    title: "IEA Leadership Webinar Series",
-    desc: "Regular knowledge forum connecting founders, executives, and sustainability practitioners with policymakers, regulators, and industry leaders.",
-    focusAreas: [
-      "BRSR, SEBI mandates, carbon credits, and climate policy updates",
-      "Sustainable finance, green lending instruments, and transition roadmaps",
-      "Responsible supply chains and export market competitiveness",
-      "Translating complex regulatory changes into actionable operational steps",
-      "Interactive case studies, industry expert panels, and open Q&A",
-    ],
-    targetGroup: "Business Owners, CXOs, ESG Leads, & Operations Managers",
   },
 ];
 
@@ -188,58 +197,76 @@ const CapacityBuildingModal = () => {
           </div>
         </div>
 
-        <div className="cbm-grid">
+        {/* Alternate Side-by-Side Rows */}
+        <div className="cbm-alternate-list">
           {programModules.map((module) => (
             <div
               key={module.id}
               id={module.id}
-              className={`cbm-card ${module.isCenterCard ? "cbm-center-card" : ""}`}
+              className="cbm-row-pair"
             >
-              <div className="cbm-card-header">
-                <div className="cbm-card-icon">{module.icon}</div>
-                <span className="cbm-card-badge">{module.badge}</span>
+              {/* Content Card */}
+              <div
+                className={`cbm-card ${
+                  module.isCenterCard ? "cbm-center-card" : ""
+                }`}
+              >
+                <div className="cbm-card-header">
+                  <div className="cbm-card-icon">{module.icon}</div>
+                  <span className="cbm-card-badge">{module.badge}</span>
+                </div>
+
+                <h3 className="cbm-card-title">{module.title}</h3>
+                <p className="cbm-card-desc">{module.desc}</p>
+
+                {module.focusAreas && (
+                  <div className="cbm-focus-section">
+                    <span className="cbm-section-label">Key Focus Areas</span>
+                    <ul className="cbm-bullet-list">
+                      {module.focusAreas.map((item, idx) => (
+                        <li key={idx}>
+                          <span className="cbm-bullet-dot" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {module.sectors && (
+                  <div className="cbm-focus-section">
+                    <span className="cbm-section-label">
+                      <FaIndustry style={{ marginRight: 6 }} /> Sector Focus
+                    </span>
+                    <div className="cbm-sector-tags">
+                      {module.sectors.map((sector, idx) => (
+                        <span key={idx} className="cbm-sector-tag">
+                          {sector}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {module.targetGroup && (
+                  <div className="cbm-target-box">
+                    <FaUsers className="cbm-target-icon" />
+                    <div>
+                      <strong>Target Group:</strong> {module.targetGroup}
+                    </div>
+                  </div>
+                )}
               </div>
 
-              <h3 className="cbm-card-title">{module.title}</h3>
-              <p className="cbm-card-desc">{module.desc}</p>
-
-              {module.focusAreas && (
-                <div className="cbm-focus-section">
-                  <span className="cbm-section-label">Key Focus Areas</span>
-                  <ul className="cbm-bullet-list">
-                    {module.focusAreas.map((item, idx) => (
-                      <li key={idx}>
-                        <span className="cbm-bullet-dot" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-
-              {module.sectors && (
-                <div className="cbm-focus-section">
-                  <span className="cbm-section-label">
-                    <FaIndustry style={{ marginRight: 6 }} /> Sector Focus
-                  </span>
-                  <div className="cbm-sector-tags">
-                    {module.sectors.map((sector, idx) => (
-                      <span key={idx} className="cbm-sector-tag">
-                        {sector}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {module.targetGroup && (
-                <div className="cbm-target-box">
-                  <FaUsers className="cbm-target-icon" />
-                  <div>
-                    <strong>Target Group:</strong> {module.targetGroup}
-                  </div>
-                </div>
-              )}
+              {/* Companion Side Image */}
+              <div className="cbm-image-wrapper">
+                <img
+                  src={module.image}
+                  alt={module.imageAlt}
+                  className="cbm-row-img"
+                  loading="lazy"
+                />
+              </div>
             </div>
           ))}
         </div>

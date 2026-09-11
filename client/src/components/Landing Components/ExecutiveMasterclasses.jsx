@@ -4,46 +4,64 @@ import {
   FaCheckCircle,
   FaCalendarAlt,
   FaFileAlt,
-  FaAward,
-  FaSlidersH,
+  FaBroadcastTower,
+  FaUsers,
 } from "react-icons/fa";
 
-const trainingPrograms = [
+const webinarSeriesData = [
   {
-    id: 1,
-    badge: "3-DAY EXECUTIVE INTENSIVE",
-    credit: "CPE Credits: 16 Hrs",
-    title: "BRSR & BRSR Core Compliance Certification",
+    id: "leadership-webinar-series",
+    badge: "REGULAR KNOWLEDGE FORUM",
+    credit: "Interactive Q&A Included",
+    title: "IEA Leadership Webinar Series",
     description:
-      "Complete clause-by-clause walkthrough of SEBI BRSR Core indicators, data assurance protocols, and internal control verification models.",
-    tags: ["SEBI Aligned", "Board Competency"],
-    nextBatch: "Next: Aug 12–14",
+      "Regular knowledge forum connecting founders, executives, and sustainability practitioners with policymakers, regulators, and industry leaders.",
+    tags: [
+      "BRSR & SEBI Mandates",
+      "Sustainable Finance & Lending",
+      "Export Supply Chain ESG",
+      "Operationalizing Regulations",
+    ],
+    targetGroup: "Business Owners, CXOs, ESG Leads, & Operations Managers",
+    nextBatch: "Next: Sept 25, 2026",
     link: "https://www.indiaesgsummit.com/",
-    syllabusPdf: "/pdfs/BRSR-Executive-Syllabus.pdf",
+    syllabusPdf: "/pdfs/IEA-Leadership-Webinar-Series.pdf",
   },
   {
-    id: 2,
-    badge: "HANDS-ON LAB • 2 DAYS",
-    credit: "Level 2 Certified",
-    title: "Carbon Footprint & GHG Protocol for MSMEs",
+    id: "carbon-accounting-briefing",
+    badge: "EXECUTIVE ROUNDTABLE",
+    credit: "CPD Certified • 2 Hrs",
+    title: "Carbon Accounting & CBAM Compliance",
     description:
-      "Practical calculation of Scope 1, Scope 2, and initial Scope 3 emissions using actual industrial utility bills, furnace logs, and logistics models.",
-    tags: ["ISO 14064 Aligned", "Toolkits Included"],
-    nextBatch: "Next: Aug 28–29",
+      "Deep dive into EU Carbon Border Adjustment Mechanism (CBAM) readiness, Scope 1 & 2 verification, and cross-border emission tax mitigation.",
+    tags: [
+      "CBAM Reporting Formats",
+      "Emissions Factor Calculation",
+      "Exporter Tariffs & Exemptions",
+      "Audit Trail Documentation",
+    ],
+    targetGroup: "Export MDs, Compliance Officers, & Plant Heads",
+    nextBatch: "Next: Oct 08, 2026",
     link: "https://www.indiaesgsummit.com/",
-    syllabusPdf: "/pdfs/GHG-Protocol-MSME-Syllabus.pdf",
+    syllabusPdf: "/pdfs/CBAM-Executive-Briefing.pdf",
   },
   {
-    id: 3,
-    badge: "VIRTUAL MASTERCLASS",
-    credit: "Tier-1 & Tier-2 Audit",
-    title: "Sustainable Supply Chain & Scope 3 Auditing",
+    id: "sustainable-finance-dialogue",
+    badge: "FINANCE & POLICY FORUM",
+    credit: "Banking Partner Panel",
+    title: "Green Lending & Transition Bonds for MSMEs",
     description:
-      "Frameworks for vendor ESG risk assessment, worker welfare verifications, extended supplier tracing, and verifiable carbon declarations.",
-    tags: ["Value-Chain Matrix", "Audit Ready"],
-    nextBatch: "Next: Sept 15",
+      "Navigating priority sector green credit lines, interest subvention schemes, and ESG risk profiling used by leading scheduled commercial banks.",
+    tags: [
+      "Concessional Green Lines",
+      "Sustainability-Linked Loans",
+      "BRSR Core Assurance for Credit",
+      "Bank ESG Risk Scoring",
+    ],
+    targetGroup: "CFOs, Finance Directors, & Treasury Leads",
+    nextBatch: "Next: Oct 22, 2026",
     link: "https://www.indiaesgsummit.com/",
-    syllabusPdf: "/pdfs/Scope3-Supply-Chain-Syllabus.pdf",
+    syllabusPdf: "/pdfs/Green-Finance-Guide.pdf",
   },
 ];
 
@@ -51,53 +69,58 @@ export default function ExecutiveMasterclasses() {
   const downloadSyllabus = (fileUrl, title) => {
     const link = document.createElement("a");
     link.href = fileUrl;
-    link.download = `${title}-Syllabus.pdf`;
+    link.download = `${title}-Brief.pdf`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
 
   return (
-    <section className="executive-training-wrapper" data-aos="fade-up">
+    <section
+      className="executive-training-wrapper"
+      id="leadership-webinar-series"
+      data-aos="fade-up"
+    >
       {/* Header */}
       <div className="training-head-row">
         <div>
           <div className="title-with-icon">
             <span className="training-ribbon-icon">
-              <FaAward />
+              <FaBroadcastTower />
             </span>
             <h2 className="training-main-heading">
-              Executive Training Programs &amp; Masterclasses
+              Executive Briefings &amp; Knowledge Forums
             </h2>
           </div>
           <p className="training-subtitle">
-            SEBI-aligned professional upskilling, audit-readiness workshops, and
-            MSME competency certificates.
+            Direct regulatory updates, transition finance dialogues, and open
+            access CXO deliberations.
           </p>
         </div>
 
         <div className="accreditation-pill">
-          Accredited by National Sustainability Board
+          Ministry &amp; Regulatory Observer Sessions
         </div>
       </div>
 
       {/* 3-Card Grid */}
       <div className="training-cards-grid">
-        {trainingPrograms.map((program) => (
-          <div className="program-card" key={program.id}>
+        {webinarSeriesData.map((item) => (
+          <div className="program-card" key={item.id}>
             {/* Top Badges */}
             <div className="program-badges-row">
-              <span className="badge-duration">{program.badge}</span>
-              <span className="badge-credit">{program.credit}</span>
+              <span className="badge-duration">{item.badge}</span>
+              <span className="badge-credit">{item.credit}</span>
             </div>
 
             {/* Title & Desc */}
-            <h3 className="program-title">{program.title}</h3>
-            <p className="program-desc">{program.description}</p>
+            <h3 className="program-title">{item.title}</h3>
+            <p className="program-desc">{item.description}</p>
 
-            {/* Feature Tags */}
+            {/* Key Focus Tags */}
+            <div className="focus-heading-label">KEY FOCUS AREAS</div>
             <div className="program-tags-row">
-              {program.tags.map((tag, idx) => (
+              {item.tags.map((tag, idx) => (
                 <span className="feature-pill" key={idx}>
                   <FaCheckCircle className="pill-check" />
                   {tag}
@@ -105,31 +128,37 @@ export default function ExecutiveMasterclasses() {
               ))}
             </div>
 
-            {/* Next Date */}
-            <div className="next-batch-row">
-              <FaCalendarAlt className="cal-icon" />
-              <span>{program.nextBatch}</span>
+            {/* Target Group Audience */}
+            <div className="target-group-row">
+              <FaUsers className="target-icon" />
+              <span>
+                <strong>Target Group:</strong> {item.targetGroup}
+              </span>
             </div>
 
-            {/* Buttons: Enroll & Syllabus */}
+            {/* Next Scheduled Date */}
+            <div className="next-batch-row">
+              <FaCalendarAlt className="cal-icon" />
+              <span>{item.nextBatch}</span>
+            </div>
+
+            {/* Action Buttons */}
             <div className="program-actions-row">
               <button
                 type="button"
                 className="btn-enroll-dark"
                 onClick={() =>
-                  window.open(program.link, "_blank", "noopener,noreferrer")
+                  window.open(item.link, "_blank", "noopener,noreferrer")
                 }
               >
-                ENROLL NOW &gt;
+                JOIN WEBINAR &gt;
               </button>
               <button
                 type="button"
                 className="btn-syllabus-light"
-                onClick={() =>
-                  downloadSyllabus(program.syllabusPdf, program.title)
-                }
+                onClick={() => downloadSyllabus(item.syllabusPdf, item.title)}
               >
-                <FaFileAlt className="file-icon" /> SYLLABUS
+                <FaFileAlt className="file-icon" /> AGENDA BRIEF
               </button>
             </div>
           </div>

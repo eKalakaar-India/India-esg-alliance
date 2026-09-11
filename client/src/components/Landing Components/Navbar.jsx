@@ -258,21 +258,10 @@ const Navbar = () => {
                     el.scrollIntoView({ behavior: "smooth", block: "start" })
                   }
                 >
-                  Directors
+                  Team
                 </HashLink>
               </li>
 
-              <li>
-                <HashLink
-                  smooth
-                  to="/about#board-of-advisors"
-                  scroll={(el) =>
-                    el.scrollIntoView({ behavior: "smooth", block: "start" })
-                  }
-                >
-                  Advisory Council
-                </HashLink>
-              </li>
             </ul>
           </li>
 
@@ -281,7 +270,7 @@ const Navbar = () => {
               to="/contactus"
               className={({ isActive }) => (isActive ? "active" : "")}
             >
-              Digital Platform for MSMEs & Industries
+              Business Opportunties
             </NavLink>
           </li>
 
@@ -306,7 +295,7 @@ const Navbar = () => {
                     el.scrollIntoView({ behavior: "smooth", block: "start" })
                   }
                 >
-                  Board &amp; CXO ESG Leadership Program
+                  Leadership Training
                 </HashLink>
               </li>
 
@@ -318,7 +307,7 @@ const Navbar = () => {
                     el.scrollIntoView({ behavior: "smooth", block: "start" })
                   }
                 >
-                  Foundational ESG Program
+                  ESG Foundational Training
                 </HashLink>
               </li>
 
@@ -330,7 +319,7 @@ const Navbar = () => {
                     el.scrollIntoView({ behavior: "smooth", block: "start" })
                   }
                 >
-                  Monthly ESG Roundtables &amp; Sector Modules
+                  Roundtables
                 </HashLink>
               </li>
 
@@ -342,7 +331,7 @@ const Navbar = () => {
                     el.scrollIntoView({ behavior: "smooth", block: "start" })
                   }
                 >
-                  ESG Reporting Solutions &amp; Audits
+                  Reporting solutions
                 </HashLink>
               </li>
 
@@ -354,7 +343,7 @@ const Navbar = () => {
                     el.scrollIntoView({ behavior: "smooth", block: "start" })
                   }
                 >
-                  Reverse Buyers–Sellers Meet for Export Promotion
+                  Buyers-Sellers Meet
                 </HashLink>
               </li>
 
@@ -366,7 +355,7 @@ const Navbar = () => {
                     el.scrollIntoView({ behavior: "smooth", block: "start" })
                   }
                 >
-                  ESG Business &amp; Innovation Solutions
+                  MDP for Founders
                 </HashLink>
               </li>
 
@@ -378,7 +367,7 @@ const Navbar = () => {
                     el.scrollIntoView({ behavior: "smooth", block: "start" })
                   }
                 >
-                  Annual ESG Summit &amp; Awards for Excellence
+                  ESG Summit
                 </HashLink>
               </li>
 
@@ -390,19 +379,7 @@ const Navbar = () => {
                     el.scrollIntoView({ behavior: "smooth", block: "start" })
                   }
                 >
-                  Management Development Program for Women Founders
-                </HashLink>
-              </li>
-
-              <li>
-                <HashLink
-                  smooth
-                  to="/solutions#leadership-webinar-series"
-                  scroll={(el) =>
-                    el.scrollIntoView({ behavior: "smooth", block: "start" })
-                  }
-                >
-                  IEA Leadership Webinar Series
+                 Management Development Program for MSME's
                 </HashLink>
               </li>
             </ul>

@@ -13,6 +13,7 @@ import KnowledgeHub from "./Pages/LandingPages/KnowledgeHub";
 import ContactUsPage from "./Pages/LandingPages/ContactUsPage";
 import ScrollToTop from "./components/Landing Components/ScrollToTop";
 import EventsPage from "./Pages/LandingPages/EventsPage";
+import StickyMemberBar from "./components/Landing Components/StickyMemberBar";
 
 function App() {
   const navigate = useNavigate();
@@ -51,6 +52,7 @@ function App() {
         <Route path="/contactus" element={<ContactUsPage />} />
         <Route path="/events" element={<EventsPage />} />
       </Routes>
+      <StickyMemberBar/>
     </div>
   );
 }

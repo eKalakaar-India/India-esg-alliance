@@ -3,10 +3,12 @@ import "./Hero.css";
 import { FaArrowRight } from "react-icons/fa";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-
-import hero1 from "../../assets/hero1.png";
-import hero2 from "../../assets/hero2.png";
-import hero3 from "../../assets/hero3.png";
+import hero1 from "../../assets/auto-parts.png";
+import hero2 from "../../assets/textiles.png";
+import hero3 from "../../assets/leather-and-footwear.png";
+import hero4 from "../../assets/gems.png";
+import hero5 from "../../assets/agriculture.png";
+import hero6 from "../../assets/cross-cutting-ESG.png";
 
 const responsive = {
   all: {
@@ -70,6 +72,18 @@ const Hero = () => {
         <div
           className="hero-slide"
           style={{ backgroundImage: `url(${hero3})` }}
+        />
+        <div
+          className="hero-slide"
+          style={{ backgroundImage: `url(${hero4})` }}
+        />
+        <div
+          className="hero-slide"
+          style={{ backgroundImage: `url(${hero5})` }}
+        />
+        <div
+          className="hero-slide"
+          style={{ backgroundImage: `url(${hero6})` }}
         />
       </Carousel>
 

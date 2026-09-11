@@ -3,90 +3,100 @@ import "./AdvisoryCouncil.css";
 import { FaUserTie, FaLinkedinIn } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import prakash from "../../assets/Colonel Prakash Tewari (Retd.).png";
+import krishna from "../../assets/Dr. Krishna Prasad.png";
+import subhransu from "../../assets/Dr. Subhransu Sekhar Acharya.png";
+import shankar from "../../assets/Prof. Shankar Murthy.png";
+import awanesh from "../../assets/Mr. Awanesh Kalik.png";
+import ashok from "../../assets/Shri Ashok Sethi.png";
+import mashar from "../../assets/Shri Mashar Velapurath.png";
+import sobins from "../../assets/Sobins Kuriakose.png";
+
+
 
 const advisoryMembers = [
   {
     id: 1,
-    name: "Dr. Sobins",
-    designation: "Sustainability & Social Governance Expert",
+    name: "Colonel Prakash Tewari (Retd.)",
+    designation: "Environment, Sustainability and Social Impact Expert",
     organization: "Advisor to NGOs, Multilateral Initiatives & Institutions",
     description:
       "Sustainability, governance, and social impact expert with extensive experience advising NGOs, multilateral initiatives, social-impact enterprises, and development institutions.",
-    image: "", // Keep empty or provide path when available
+    image: prakash, // Keep empty or provide path when available
     linkedin: "https://linkedin.com",
   },
   {
     id: 2,
-    name: "Dr. Arun Kumar Rath, IAS",
-    designation: "Former Education Secretary",
+    name: "Dr. Krishna Prasad",
+    designation: "Member of Parliament and Former IPS Officer",
     organization: "Government of India",
     description:
       "Eminent policymaker and governance leader championing structural ESG policies, public-private stewardship, and systemic educational reforms across India.",
-    image: "",
+    image: krishna,
     linkedin: "https://linkedin.com",
   },
   {
     id: 3,
-    name: "Rajesh Kumar Chaudhry",
-    designation: "Special Secretary, DPE",
+    name: "Dr. Subhransu Sekhar Acharya",
+    designation: "Chairman-cum-Managing Director, NSIC",
     organization: "Ministry of Finance, Government of India",
     description:
       "Public enterprise and fiscal strategy veteran steering governance frameworks, sustainable enterprise scaling, and public sector ESG compliance.",
-    image: "",
+    image: subhransu,
     linkedin: "https://linkedin.com",
   },
   {
     id: 4,
-    name: "Prof. Bipin Jojo",
-    designation: "Dean – School of Social Work",
-    organization: "TISS, Mumbai",
+    name: "Prof. Shankar Murthy",
+    designation: "Professor, Environmental Engineering and Management",
+    organization: "IIM Mumbai",
     description:
       "Renowned academician guiding social impact evaluation, community development metrics, and inclusive grassroots sustainability models.",
-    image: "",
+    image: shankar,
     linkedin: "https://linkedin.com",
   },
   {
   id: 5,
-  name: "Shri Mashar Velapurath",
-  designation: "Managing Director",
+  name: "Mr. Awanesh Kalik",
+  designation: "DGM & CEO",
   organization: "AFC India",
   description:
     "Experienced leader in agriculture and rural development with expertise in policy engagement, project management and technical consultancy.",
-  image: "",
+  image: awanesh,
   linkedin: "https://linkedin.com",
 },
 
 {
   id: 6,
   name: "Shri Ashok Sethi",
-  designation: "Ex-Chairman, TCE & Ex-Director, Tata Power",
+  designation: "Sustainability and Corporate Leadership Expert",
   organization: "Tata Power / Tata Consulting Engineers",
   description:
     "Power sector veteran with over four decades of experience in strategic operations, regulatory advocacy, energy infrastructure and business growth.",
-  image: "",
+  image: ashok,
   linkedin: "https://linkedin.com",
 },
 
 {
   id: 7,
-  name: "Col. Prakash Tewari (Retd.)",
+  name: "Shri Mashar Velapurath",
   designation:
-    "Member, Expert Appraisal Committee, Ministry of Environment, Forest & Climate Change",
+    "Managing Director, AFC India Limited",
   organization: "Government of India",
   description:
     "Army veteran and sustainability leader with extensive experience in CSR, social impact, education and environmental initiatives.",
-  image: "",
+  image: mashar,
   linkedin: "https://linkedin.com",
 },
 
 {
   id: 8,
-  name: "Shri P. Udayakumar",
-  designation: "Ex-Chairman & Managing Director",
+  name: "Sobins Kuriakose",
+  designation: "Institution Development & Public Policy Specialist",
   organization: "National Small Industries Corporation (NSIC)",
   description:
     "Experienced MSME leader with expertise in strategic planning, marketing, enterprise development and growth support for small industries.",
-  image: "",
+  image: sobins,
   linkedin: "https://linkedin.com",
 },
 ];

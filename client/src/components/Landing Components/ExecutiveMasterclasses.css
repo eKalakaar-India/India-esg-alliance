@@ -1,3 +1,6 @@
+/* ===================================================
+   EXECUTIVE TRAINING & WEBINARS MAIN WRAPPER
+=================================================== */
 .executive-training-wrapper {
   width: 100%;
   margin-top: 48px;
@@ -5,6 +8,7 @@
   box-sizing: border-box;
 }
 
+/* Header Section */
 .training-head-row {
   display: flex;
   justify-content: space-between;
@@ -12,6 +16,12 @@
   margin-bottom: 24px;
   flex-wrap: wrap;
   gap: 16px;
+}
+
+.title-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .training-ribbon-icon {
@@ -45,7 +55,9 @@
   border-radius: 20px;
 }
 
-/* ================= 3-COLUMN GRID ================= */
+/* ===================================================
+   3-COLUMN CARD GRID
+=================================================== */
 .training-cards-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -73,7 +85,7 @@
   box-shadow: 0 12px 28px rgba(0, 69, 13, 0.08);
 }
 
-/* Badge Top */
+/* Badge Top Row */
 .program-badges-row {
   display: flex;
   justify-content: space-between;
@@ -110,11 +122,20 @@
   font-size: 13px;
   color: #555e51;
   line-height: 1.6;
-  margin: 0 0 18px 0;
+  margin: 0 0 16px 0;
   flex-grow: 1;
 }
 
-/* Feature Tag Pills */
+/* Key Focus Areas Label & Pills */
+.focus-heading-label {
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  color: #00450d;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
 .program-tags-row {
   display: flex;
   gap: 8px;
@@ -140,6 +161,32 @@
   color: #007a1b;
 }
 
+/* Target Audience Box */
+.target-group-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #3b4539;
+  background: #f8faf7;
+  border: 1px solid #e5ebe2;
+  border-radius: 8px;
+  padding: 8px 10px;
+  margin-bottom: 14px;
+}
+
+.target-icon {
+  color: #007a1b;
+  font-size: 13px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.target-group-row strong {
+  color: #121811;
+}
+
 /* Next Batch Date */
 .next-batch-row {
   display: inline-flex;
@@ -148,7 +195,7 @@
   font-size: 12px;
   font-weight: 700;
   color: #2c382b;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .cal-icon {
@@ -156,7 +203,7 @@
   color: #007a1b;
 }
 
-/* CTA Buttons Row */
+/* Action Buttons */
 .program-actions-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -209,6 +256,9 @@
   font-size: 11px;
 }
 
+/* ===================================================
+   RESPONSIVE BREAKPOINTS
+=================================================== */
 @media (max-width: 992px) {
   .training-cards-grid {
     grid-template-columns: 1fr;

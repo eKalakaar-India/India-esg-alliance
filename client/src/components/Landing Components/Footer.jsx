@@ -1,5 +1,5 @@
 import "./Footer.css";
-import { FaShareAlt, FaGlobe, FaPaperPlane } from "react-icons/fa";
+import { FaPaperPlane, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
 export default function Footer() {
@@ -18,12 +18,12 @@ export default function Footer() {
           </p>
 
           <div className="social-links">
-            <a href="/">
-              <FaShareAlt />
+            <a style={{backgroundColor: '#E1306c'}} href="https://www.instagram.com/indiaesgalliance?stkn=MWVnY2FhOW9uemR2ag==">
+              <FaInstagram  />
             </a>
 
-            <a href="/">
-              <FaGlobe />
+            <a style={{backgroundColor: '#0A66C2'}} href="https://www.linkedin.com/company/india-esg-alliance/">
+              <FaLinkedinIn />
             </a>
           </div>
         </div>

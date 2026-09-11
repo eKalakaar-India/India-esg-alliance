@@ -1,0 +1,112 @@
+/* =====================================
+   STICKY RIGHT-EDGE MEMBERSHIP TAB (RECTANGULAR)
+===================================== */
+.sticky-member-tab {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9999;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  transition: transform 0.25s ease;
+}
+
+.tab-pill-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #E76F61;
+  color: #ffffff;
+  padding: 14px 12px;
+  border-radius: 0; /* Fully rectangular, no curves */
+  border: 1.5px solid #ffffff;
+  border-right: none;
+  box-shadow: -4px 6px 20px rgba(234, 122, 47, 0.35);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg); /* Keeps the vertical text right-side up */
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+}
+
+/* Icon Containers */
+.tab-icon-wrapper,
+.tab-arrow-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 0; /* Rectangular icon boxes */
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.tab-icon {
+  font-size: 13px;
+  color: #ffffff;
+  transform: rotate(90deg); /* Rotates upright */
+}
+
+.tab-arrow {
+  font-size: 11px;
+  color: #ffffff;
+  transform: rotate(90deg);
+  transition: transform 0.2s ease;
+}
+
+.tab-label {
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+  padding: 8px 0;
+  white-space: nowrap;
+}
+
+/* Hover States */
+.sticky-member-tab:hover {
+  transform: translateY(-50%) translateX(-5px);
+}
+
+.sticky-member-tab:hover .tab-pill-content {
+  background-color: #EA7A2F; /* Deepened orange shade on hover */
+  box-shadow: -6px 8px 24px rgba(216, 104, 29, 0.45);
+}
+
+.sticky-member-tab:hover .tab-arrow {
+  transform: rotate(90deg) translateX(3px);
+}
+
+/* Mobile Friendly Adjustment */
+@media (max-width: 600px) {
+  .sticky-member-tab {
+    top: auto;
+    bottom: 20px;
+    right: 0;
+    transform: none;
+  }
+
+  .sticky-member-tab:hover {
+    transform: translateY(-2px);
+  }
+
+  .tab-pill-content {
+    writing-mode: horizontal-tb;
+    transform: none;
+    border-radius: 0;
+    border-right: 1.5px solid #ffffff;
+    padding: 10px 16px;
+  }
+
+  .tab-icon,
+  .tab-arrow {
+    transform: none;
+  }
+
+  .tab-label {
+    padding: 0 6px;
+    font-size: 12.5px;
+  }
+}

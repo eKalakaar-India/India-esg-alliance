@@ -88,7 +88,7 @@ export default function EventsPage() {
           <div id="awards" style={{ scrollMarginTop: "120px" }}>
             <AwardsBanner />
           </div>
-
+          
           <CorporateWorkshopBanner />
         </div>
       </main>
