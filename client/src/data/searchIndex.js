@@ -53,6 +53,38 @@ export const searchableContent = [
     keywords: "contact support register query advisory reach out phone email",
   },
   {
+    id: "p-6",
+    title: "IEA Handbook",
+    category: "Resources",
+    path: "/knowledgehub?search=handbook#handbook",
+    keywords:
+      "handbook pdf download msme guidelines english hindi download guide",
+  },
+  {
+    id: "p-7",
+    title: "IEA Brochure",
+    category: "Resources",
+    path: "/knowledgehub?search=brochure#handbook",
+    keywords:
+      "handbook pdf download msme guidelines english hindi download guide",
+  },
+  {
+    id: "p-8",
+    title: "IEA Concept Notes",
+    category: "Resources",
+    path: "/knowledgehub?search=concept#handbook",
+    keywords:
+      "handbook pdf download msme guidelines english hindi download guide",
+  },
+  {
+    id: "p-9",
+    title: "IEA Pitch PPT",
+    category: "Resources",
+    path: "/knowledgehub?search=ppt#handbook",
+    keywords:
+      "handbook pdf download msme guidelines english hindi download guide",
+  },
+  {
     id: "e-1",
     title: "India ESG Summit (Events)",
     category: "Events",

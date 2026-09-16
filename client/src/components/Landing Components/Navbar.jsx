@@ -101,7 +101,7 @@ const Navbar = () => {
                 value={searchQuery}
                 onChange={handleSearchChange}
                 onFocus={() =>
-                  searchQuery.trim().length > 1 && setShowResults(true)
+                  setShowResults(true)
                 }
               />
 
@@ -122,32 +122,49 @@ const Navbar = () => {
             </div>
 
             {/* Live Search Results Modal/Dropdown */}
-            {showResults && (
+            {showResults ? (
               <div className="search-results-box">
-                {searchResults.length > 0 ? (
-                  searchResults.map((item) => (
-                    <div
-                      key={item.id}
-                      className="search-result-item"
-                      onClick={() => handleSelectResult(item)}
-                    >
-                      <div className="result-text">
-                        <span className="result-title">{item.title}</span>
-                        <span className="result-cat">{item.category}</span>
-                      </div>
+                {searchQuery.trim().length > 1 ? (
+                  searchResults.length > 0 ? (
+                    searchResults.map((item) => (
+                      <div
+                        key={item.id}
+                        className="search-result-item"
+                        onClick={() => handleSelectResult(item)}
+                      >
+                        <div className="result-text">
+                          <span className="result-title">{item.title}</span>
+                          <span className="result-cat">{item.category}</span>
+                        </div>
 
-                      {item.external && (
-                        <FaExternalLinkAlt className="ext-icon" />
-                      )}
+                        {item.external && (
+                          <FaExternalLinkAlt className="ext-icon" />
+                        )}
+                      </div>
+                    ))
+                  ) : (
+                    <div className="no-search-results">
+                      No matching pages or resources found.
                     </div>
-                  ))
+                  )
                 ) : (
-                  <div className="no-search-results">
-                    No matching pages or resources found.
-                  </div>
-                )}
-              </div>
-            )}
+                   searchableContent.map((item) => (
+                     <div
+                       key={item.id}
+                       className="search-result-item"
+                       onClick={() => handleSelectResult(item)}
+                     >
+                       <div className="result-text">
+                         <span className="result-title">{item.title}</span>
+                         <span className="result-cat">{item.category}</span>
+                       </div>
+ 
+                       {item.external && (
+                         <FaExternalLinkAlt className="ext-icon" />
+                       )}
+                     </div>)))}
+              </div>) : null}
+            
           </div>
 
           <div

@@ -11,6 +11,7 @@ import CallToAction from "../../components/Landing Components/CalltoAction";
 import WhyIEA from "../../components/Landing Components/WhyIEA";
 import AdvisoryCouncil from "../../components/Landing Components/AdvisoryCouncil";
 import Directors from "../../components/Landing Components/Directors";
+import PartnersAndClientAboutPage from "../../components/Landing Components/PartnersAndClientAboutPage";
 
 const AboutPage = () => {
 
@@ -41,6 +42,7 @@ const AboutPage = () => {
       <AboutHero />
       <VisionMission />
       <WhyIEA />
+      <PartnersAndClientAboutPage />
       <Directors />
       <AdvisoryCouncil />
       {/* <IndustryExperts /> */}
