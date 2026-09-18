@@ -47,16 +47,16 @@ const SolutionHero = () => {
 
           {/* Quick Pillar Points */}
           <div className="solution-hero-features">
-            <div className="feature-item">
-              <FaRegCheckCircle className="feature-icon" />
+            <div className="feature-item-sol">
+              <FaRegCheckCircle className="feature-icon-sol" />
               <span>SEBI BRSR Core Aligned</span>
             </div>
-            <div className="feature-item">
-              <FaRegCheckCircle className="feature-icon" />
+            <div className="feature-item-sol">
+              <FaRegCheckCircle className="feature-icon-sol" />
               <span>Executive &amp; MSME Focus</span>
             </div>
-            <div className="feature-item">
-              <FaRegCheckCircle className="feature-icon" />
+            <div className="feature-item-sol">
+              <FaRegCheckCircle className="feature-icon-sol" />
               <span>Cross-Border Compliance</span>
             </div>
           </div>

@@ -127,9 +127,9 @@ export default function StateSummitsSection() {
 
             {/* Bottom Actions & Delegates */}
             <div className="chapter-card-footer">
-              <span className="attendee-counter">
+              {/* <span className="attendee-counter">
                 <FaUsers className="user-icon" /> {item.attendees}
-              </span>
+              </span> */}
 
               <button
                 type="button"

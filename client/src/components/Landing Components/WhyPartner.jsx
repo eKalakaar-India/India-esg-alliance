@@ -30,9 +30,8 @@ const WhyPartner = () => {
 
   return (
     <>
-      <section className="why-partner">
+      {/* <section className="why-partner">
         <div className="why-container">
-          {/* LEFT: fade-right */}
           <div
             className="why-left"
             data-aos="fade-right"
@@ -68,20 +67,17 @@ const WhyPartner = () => {
             </div>
           </div>
 
-          {/* RIGHT: fade-left */}
           <div
             className="why-right"
             data-aos="fade-left"
             data-aos-duration="800"
           >
-            {/* Decorative Rings */}
             <div className="circle-bg">
               <div className="circle-inner">
                 <img src={dashboardImage} alt="Dashboard" />
               </div>
             </div>
 
-            {/* Floating Card */}
             <div
               className="floating-card"
               data-aos="zoom-in"
@@ -99,7 +95,7 @@ const WhyPartner = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="cta2">

@@ -15,7 +15,7 @@ const directorsData = [
     image: sanjay,
   },
   {
-    name: "Mr. Stalin Nayak",
+    name: "Stalin Nayak",
     role: "Director & Senior Development Professional",
     bio: "Mr. Stalin Nayak is a senior development professional and social entrepreneur. He is the founder of PANTISS group and is well known for his work on sustainability in mining areas.",
     image: stalin,

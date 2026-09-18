@@ -21,7 +21,7 @@ export default function Pioneer() {
           data-aos-duration="800"
         >
           <img src={boardroom} alt="boardroom" />
-          <div className="room-content">
+          {/* <div className="room-content">
             <p
               style={{
                 color: "#00450D",
@@ -36,7 +36,7 @@ export default function Pioneer() {
             <p style={{ color: "#41493E", fontSize: "16px", margin: 0 }}>
               Years of Stewardship
             </p>
-          </div>
+          </div> */}
         </div>
 
         <div

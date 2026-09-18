@@ -166,7 +166,7 @@ export default function FlagshipSummitCard() {
             <p className="summit-theme-desc">
               <strong className="theme-lead">Keynote Theme:</strong>{" "}
               Accelerating BRSR Core Assurance, Decarbonized Value Chains, and
-              Transition Financing for Indian Industry. Uniting 1,200+ top
+              Transition Financing for Indian Industry. Uniting many top
               executives, credit rating agencies, and policymakers.
             </p>
           </div>
@@ -174,21 +174,21 @@ export default function FlagshipSummitCard() {
           {/* Quick Metrics Grid */}
           <div className="kpi-grid">
             <div className="kpi-box">
-              <h4>1,200+</h4>
+              <h4>200+</h4>
               <span>CXO, MD &amp; ESG DELEGATES</span>
             </div>
             <div className="kpi-box">
-              <h4>45+</h4>
+              <h4>20+</h4>
               <span>KEYNOTE SPEAKERS</span>
             </div>
-            <div className="kpi-box">
+            {/* <div className="kpi-box">
               <h4>8</h4>
               <span>MINISTERIAL ROUNDTABLES</span>
             </div>
             <div className="kpi-box">
               <h4>38+</h4>
               <span>COUNCIL SPONSORS</span>
-            </div>
+            </div> */}
           </div>
 
           {/* Council Avatars & Registration Guarantee */}

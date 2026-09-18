@@ -257,7 +257,7 @@ export default function ESGBriefingSignup() {
           </h2>
 
           <p className="esg-body">
-            Join 14,000+ chief sustainability officers, investment directors, CXOs,
+            Join the chief sustainability officers, investment directors, CXOs,
             and legal compliance officers. Receive our bi-weekly dispatch delivering
             SEBI circular breakdowns, national carbon market pricing signals, and
             assurance audit checklists.

@@ -4,6 +4,7 @@ import screen from "../../assets/screen.png";
 import hand from "../../assets/Hand.svg";
 import book from "../../assets/book.svg";
 import { FaArrowRight, FaHandshake, FaBookOpen } from "react-icons/fa";
+import { MonitorCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -62,24 +63,30 @@ const ESGSolutions = () => {
           <div className="right-grid">
             {/* Assessment */}
             <div className="assessment-card glass">
+              
               <div className="assessment-left">
+                <div className="icon">
+                  {/* <img src={MonitorCheck} alt="icon" /> */}
+                  <MonitorCheck size={48} color="#ff9f0f" style={{transform:'rotate(360deg)'}} />
+                </div>
                 <h3>Digital ESG Assessment</h3>
 
-                <p>Benchmarking tool for industry standards.</p>
+                <p>Leverages automated platforms and data analytics to evaluate an organization's environmental, social, and governance impact in real time. </p>
 
-                <button className="link-btn">
+                {/* <button className="link-btn">
                   Start Assessment
                   <FaArrowRight />
-                </button>
+                </button> */}
               </div>
 
               <div className="progress-circle">
-                <svg width="150" height="150">
+                {/* <svg width="150" height="150">
                   <circle className="bg" cx="75" cy="75" r="52" />
                   <circle className="progress" cx="75" cy="75" r="52" />
                 </svg>
 
-                <span>72%</span>
+                <span>72%</span> */}
+                
               </div>
             </div>
 

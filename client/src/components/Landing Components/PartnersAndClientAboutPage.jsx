@@ -10,6 +10,10 @@ import upgovt from '../../assets/upgovt.webp'
 
 const data =[
     {
+        img:upgovt,
+        para:'Government of Uttar Pradesh is one of the first government entity that supported India ESG Alliance in organizing India ESG Alliance summit in Lucknow.'
+    },
+    {
         img:afc,
         para:'AFC India Limited - AFC India Ltd. (formerly Agricultural Finance Corporation Ltd.), is a multi-disciplinary cross-functional development organization providing consulting, advisory and implementation support for agriculture, rural development and other strategic socio-economic sectors in India. AFC India Limited is one of the earlier supports for the India ESG Alliance and supports its initiatives like India ESG Summits and capacity building trainings and workshops. '
     },
@@ -28,10 +32,6 @@ const data =[
     {
         img:si,
         para:'Sustainability Intelligence India ESG Alliance have joined the hands to promote informed, evidence-based engagement on emerging sustainability issues and facilitate partnerships among businesses, institutions and key stakeholders to accelerate a sustainable future for South Asia. We supports organizations in strengthening how sustainability decisions are understood and addressed across complex and evolving areas such as environmental quality, biodiversity, social development and climate change.'
-    },
-    {
-        img:upgovt,
-        para:'Government of Uttar Pradesh is one of the first government entity that supported India ESG Alliance in organizing India ESG Alliance summit in Lucknow.'
     },
     {
         img:iimlucknow,

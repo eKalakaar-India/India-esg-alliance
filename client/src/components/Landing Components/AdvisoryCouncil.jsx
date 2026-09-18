@@ -57,7 +57,7 @@ const advisoryMembers = [
   },
   {
   id: 5,
-  name: "Mr. Awanesh Kalik",
+  name: "Awanesh Kalik",
   designation: "DGM & CEO",
   organization: "AFC India",
   description:
@@ -68,7 +68,7 @@ const advisoryMembers = [
 
 {
   id: 6,
-  name: "Shri Ashok Sethi",
+  name: "Ashok Sethi",
   designation: "Sustainability and Corporate Leadership Expert",
   organization: "Tata Power / Tata Consulting Engineers",
   description:
@@ -79,7 +79,7 @@ const advisoryMembers = [
 
 {
   id: 7,
-  name: "Shri Mashar Velapurath",
+  name: "Mashar Velapurath",
   designation:
     "Managing Director, AFC India Limited",
   organization: "Government of India",
