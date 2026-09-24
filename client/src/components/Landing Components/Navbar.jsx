@@ -284,7 +284,7 @@ const Navbar = () => {
 
           <li>
             <NavLink
-              to="/contactus"
+              to="/businessopportunity"
               className={({ isActive }) => (isActive ? "active" : "")}
             >
               Business Opportunties
@@ -499,6 +499,14 @@ const Navbar = () => {
             </ul>
           </li>
 
+          <li>
+            <NavLink
+              to="/careers"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Careers
+            </NavLink>
+          </li>
           <li>
             <NavLink
               to="/contactus"

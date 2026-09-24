@@ -46,7 +46,7 @@ const textSlides = [
   </>,
 ];
 
-const Hero = () => {
+const BusinessHero = () => {
   return (
     <div className="hero-main">
       {/* Background Image Carousel */}
@@ -133,4 +133,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default BusinessHero;

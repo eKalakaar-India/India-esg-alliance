@@ -11,8 +11,10 @@ import AboutPage from "./Pages/LandingPages/AboutPage";
 import SolutionPage from "./Pages/LandingPages/SolutionPage";
 import KnowledgeHub from "./Pages/LandingPages/KnowledgeHub";
 import ContactUsPage from "./Pages/LandingPages/ContactUsPage";
+import BusinessOpportunities from "./Pages/LandingPages/BusinessOpportunities";
 import ScrollToTop from "./components/Landing Components/ScrollToTop";
 import EventsPage from "./Pages/LandingPages/EventsPage";
+import CareersPage from "./Pages/LandingPages/Careers";
 import StickyMemberBar from "./components/Landing Components/StickyMemberBar";
 
 function App() {
@@ -47,9 +49,11 @@ function App() {
       <Routes>
         <Route path="/home" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/businessopportunity" element={<BusinessOpportunities />} />
         <Route path="/solutions" element={<SolutionPage />} />
         <Route path="/knowledgehub" element={<KnowledgeHub />} />
         <Route path="/contactus" element={<ContactUsPage />} />
+        <Route path="/careers" element={<CareersPage />} />
         <Route path="/events" element={<EventsPage />} />
       </Routes>
       <StickyMemberBar/>

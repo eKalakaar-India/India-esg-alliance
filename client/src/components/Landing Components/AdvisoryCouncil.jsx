@@ -5,28 +5,18 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import prakash from "../../assets/Colonel Prakash Tewari (Retd.).png";
 import krishna from "../../assets/Dr. Krishna Prasad.png";
-import subhransu from "../../assets/Dr. Subhransu Sekhar Acharya.png";
 import shankar from "../../assets/Prof. Shankar Murthy.png";
 import awanesh from "../../assets/Mr. Awanesh Kalik.png";
 import ashok from "../../assets/Shri Ashok Sethi.png";
 import mashar from "../../assets/Shri Mashar Velapurath.png";
 import sobins from "../../assets/Sobins Kuriakose.png";
+import uday from "../../assets/Uday Kumar Sir NSIC Ex Chariman.png";
 
 
 
 const advisoryMembers = [
   {
     id: 1,
-    name: "Colonel Prakash Tewari (Retd.)",
-    designation: "Environment, Sustainability and Social Impact Expert",
-    organization: "Advisor to NGOs, Multilateral Initiatives & Institutions",
-    description:
-      "Sustainability, governance, and social impact expert with extensive experience advising NGOs, multilateral initiatives, social-impact enterprises, and development institutions.",
-    image: prakash, // Keep empty or provide path when available
-    linkedin: "https://linkedin.com",
-  },
-  {
-    id: 2,
     name: "Dr. Krishna Prasad",
     designation: "Member of Parliament and Former IPS Officer",
     organization: "Government of India",
@@ -36,13 +26,25 @@ const advisoryMembers = [
     linkedin: "https://linkedin.com",
   },
   {
-    id: 3,
-    name: "Dr. Subhransu Sekhar Acharya",
-    designation: "Chairman-cum-Managing Director, NSIC",
-    organization: "Ministry of Finance, Government of India",
+    id: 7,
+    name: "Mashar Velapurath",
+    designation:
+      "Managing Director, AFC India Limited",
+    organization: "Government of India",
     description:
-      "Public enterprise and fiscal strategy veteran steering governance frameworks, sustainable enterprise scaling, and public sector ESG compliance.",
-    image: subhransu,
+      "Army veteran and sustainability leader with extensive experience in CSR, social impact, education and environmental initiatives.",
+    image: mashar,
+    linkedin: "https://linkedin.com",
+  },
+  
+  {
+    id: 3,
+    name: "P. Udayakumar",
+    designation: "Former CMD, NSIC. ",
+    organization: "NSIC, Government of India",
+    description:
+      "An IIM Bangalore alumnus, Shri Udayakumar brings 35+ years of professional experience in MSME development, marketing, policy, and strategic business development, including 12 years of Board-level leadership experience with NSIC.",
+    image: uday,
     linkedin: "https://linkedin.com",
   },
   {
@@ -53,6 +55,16 @@ const advisoryMembers = [
     description:
       "Renowned academician guiding social impact evaluation, community development metrics, and inclusive grassroots sustainability models.",
     image: shankar,
+    linkedin: "https://linkedin.com",
+  },
+  {
+    id: 5,
+    name: "Colonel Prakash Tewari (Retd.)",
+    designation: "Environment, Sustainability and Social Impact Expert",
+    organization: "Advisor to NGOs, Multilateral Initiatives & Institutions",
+    description:
+      "Sustainability, governance, and social impact expert with extensive experience advising NGOs, multilateral initiatives, social-impact enterprises, and development institutions.",
+    image: prakash, // Keep empty or provide path when available
     linkedin: "https://linkedin.com",
   },
   {
@@ -74,18 +86,6 @@ const advisoryMembers = [
   description:
     "Power sector veteran with over four decades of experience in strategic operations, regulatory advocacy, energy infrastructure and business growth.",
   image: ashok,
-  linkedin: "https://linkedin.com",
-},
-
-{
-  id: 7,
-  name: "Mashar Velapurath",
-  designation:
-    "Managing Director, AFC India Limited",
-  organization: "Government of India",
-  description:
-    "Army veteran and sustainability leader with extensive experience in CSR, social impact, education and environmental initiatives.",
-  image: mashar,
   linkedin: "https://linkedin.com",
 },
 

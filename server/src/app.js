@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import queryRouter from "./routes/query.routes.js";
+import careerRouter from "./routes/careers.js";
 
 const app = express();
 
@@ -28,7 +29,8 @@ app.get("/health", (req, res) => {
 
 // ================= API ROUTES =================
 
-app.use("/api/v1", queryRouter);
+app.use("/api/v1/queries", queryRouter);
+app.use("/api/v1/careers", careerRouter);
 
 // ================= 404 HANDLER =================
 

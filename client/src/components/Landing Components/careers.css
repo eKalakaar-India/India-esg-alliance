@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap');
+/* India ESG – Careers page. All selectors are prefixed .cr- to avoid clashing with the existing site CSS. */
+.cr-page{
+  --navy:#0F2747;--forest:#166534;--teal:#2F7F7B;--cobalt:#2563EB;--orange:#EA7A2F;--coral:#E76F61;
+  --sand:#D6B98C;--slate:#475569;--light:#F8FAFC;--offwhite:#FAF9F6;--white:#FFFFFF;--line:#E2E8F0;
+  font-family:'Public Sans',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+  color:var(--slate);background:var(--offwhite);line-height:1.65;font-size:1rem;
+}
+.cr-page *,.cr-page *::before,.cr-page *::after{box-sizing:border-box}
+.cr-wrap{max-width:1120px;margin:0 auto;padding:0 1.25rem}
+.cr-page h1,.cr-page h2,.cr-page h3{font-family:'Source Serif 4',Georgia,'Times New Roman',serif;font-weight:600;line-height:1.2;margin:0}
+.cr-page a{color:var(--cobalt)}
+.cr-page :focus-visible{outline:3px solid var(--cobalt);outline-offset:2px}
+
+/* Buttons */
+.cr-btn{display:inline-block;background:var(--orange);color:var(--navy)!important;font-family:inherit;font-size:1rem;font-weight:600;line-height:1;
+  padding:.95rem 1.5rem;border:0;border-radius:6px;text-decoration:none;cursor:pointer;transition:background .15s}
+.cr-btn:hover{background:#d96d22}
+.cr-btn:disabled{opacity:.6;cursor:not-allowed}
+
+/* Hero */
+.cr-hero{background:var(--navy);color:var(--white);padding:4.5rem 0 5rem;border-bottom:6px solid var(--sand)}
+.cr-hero__grid{display:grid;gap:2.5rem;align-items:center}
+.cr-hero h1{font-size:clamp(2rem,4.6vw,3.3rem);max-width:16em;margin-bottom:1.25rem}
+.cr-hero p{max-width:34em;color:rgba(255,255,255,.85);margin:0 0 2rem;font-size:1.075rem}
+.cr-hero__card{background:rgba(255,255,255,.06);border:1px solid rgba(214,185,140,.45);border-radius:10px;padding:1.5rem}
+.cr-hero__card h2{font-size:1.15rem;color:var(--sand);margin-bottom:1rem}
+.cr-hero__card ul{list-style:none;margin:0;padding:0}
+.cr-hero__card li+li{border-top:1px solid rgba(255,255,255,.14)}
+.cr-hero__card a{display:block;padding:.9rem 0;color:var(--white);text-decoration:none}
+.cr-hero__card a:hover strong{text-decoration:underline}
+.cr-hero__card span{display:block;font-size:.9rem;color:rgba(255,255,255,.7)}
+
+/* Sections */
+.cr-section{padding:4.5rem 0}
+.cr-section--light{background:var(--light);border-top:1px solid var(--line)}
+.cr-h2{font-size:clamp(1.6rem,3vw,2.2rem);color:var(--navy);margin-bottom:.75rem}
+.cr-lead{font-size:1.075rem;max-width:38em;margin:0 0 2.5rem}
+.cr-section--light .cr-lead{margin-bottom:1rem}
+
+/* Role cards */
+.cr-roles{display:grid;gap:1.75rem}
+.cr-role{--accent:var(--forest);background:var(--white);border:1px solid var(--line);border-top:6px solid var(--accent);
+  border-radius:10px;padding:1.75rem;display:flex;flex-direction:column;scroll-margin-top:1.5rem}
+.cr-role--teal{--accent:var(--teal)}
+.cr-role h3{font-size:1.45rem;color:var(--navy);margin-bottom:1.25rem}
+.cr-role h4{font-size:1rem;color:var(--navy);margin:1.5rem 0 .4rem}
+.cr-role p{margin:0}
+.cr-role ul{margin:0;padding-left:1.2rem}
+.cr-role li{margin-bottom:.4rem;padding-left:.2rem}
+.cr-role li::marker{color:var(--accent)}
+.cr-role .cr-btn{align-self:flex-start;margin-top:1.75rem}
+.cr-facts{display:grid;gap:.75rem;margin:0;padding:1rem;background:var(--light);border-radius:8px;border-left:4px solid var(--sand)}
+.cr-facts dt{font-size:.85rem;color:var(--slate)}
+.cr-facts dd{margin:0;font-weight:600;color:var(--navy)}
+
+/* Apply */
+.cr-apply{display:grid;gap:2.5rem}
+.cr-form{display:grid;gap:1.1rem;background:var(--white);border:1px solid var(--line);border-radius:10px;padding:1.75rem}
+.cr-field{display:flex;flex-direction:column;gap:.35rem;min-width:0}
+.cr-field label{font-weight:600;color:var(--navy);font-size:.95rem}
+.cr-field input[type=text],.cr-field input[type=email],.cr-field input[type=tel],.cr-field input[type=number],
+.cr-field select,.cr-field textarea,.cr-field input[type=file]{
+  width:100%;font:inherit;color:var(--navy);background:var(--white);border:1px solid #CBD5E1;border-radius:6px;padding:.7rem .8rem}
+.cr-field textarea{resize:vertical}
+.cr-field [aria-invalid=true]{border-color:var(--coral);border-width:2px}
+.cr-err{font-size:.875rem;color:#B3392B}
+.cr-check{display:flex;gap:.6rem;align-items:flex-start;font-weight:400!important;color:var(--slate)!important}
+.cr-check input{margin-top:.3rem;accent-color:var(--forest)}
+.cr-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.cr-status{padding:.9rem 1rem;border-radius:6px;font-weight:500;color:var(--navy);border-left:5px solid var(--slate);background:var(--light)}
+.cr-status--ok{border-color:var(--forest);background:#ECF6EF}
+.cr-status--error{border-color:var(--coral);background:#FDEFED}
+
+@media (min-width:760px){
+  .cr-hero__grid{grid-template-columns:1.4fr 1fr}
+  .cr-facts{grid-template-columns:repeat(3,1fr)}
+  .cr-form{grid-template-columns:1fr 1fr}
+  .cr-field--full,.cr-status{grid-column:1/-1}
+}
+@media (min-width:980px){
+  .cr-roles{grid-template-columns:1fr 1fr;align-items:stretch}
+  .cr-facts{grid-template-columns:1fr}
+  .cr-apply{grid-template-columns:1fr 1.5fr;align-items:start}
+}
+@media (prefers-reduced-motion:reduce){.cr-btn{transition:none}}

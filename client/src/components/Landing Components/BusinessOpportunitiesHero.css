@@ -1,0 +1,339 @@
+/* =========================================
+   BUSINESS OPPORTUNITIES
+   Desktop-focused traditional CSS
+========================================= */
+
+.business-opportunities {
+  width: 100%;
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at 78% 18%,
+      rgba(225, 228, 250, 0.45),
+      transparent 32%
+    ),
+    linear-gradient(
+      135deg,
+      #f7f7fb 0%,
+      #f5f4fb 48%,
+      #f8f7fc 100%
+    );
+
+  padding: 34px 0 38px;
+  box-sizing: border-box;
+}
+
+.business-container {
+  width: calc(100% - 80px);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* =========================================
+   BADGE
+========================================= */
+
+.business-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  height: 29px;
+  padding: 0 12px;
+
+  border: 1px solid #b8c8c9;
+  border-radius: 5px;
+
+  background: rgba(236, 242, 242, 0.9);
+
+  color: #125d61;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.55px;
+}
+
+/* =========================================
+   TITLE
+========================================= */
+
+.business-title {
+  margin: 17px 0 17px;
+
+  color: #071d3d;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 39px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -1.1px;
+}
+
+/* =========================================
+   INTRODUCTION
+========================================= */
+
+.business-intro {
+  width: 820px;
+  max-width: 100%;
+
+  color: #234263;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.business-intro p {
+  margin: 0 0 7px;
+}
+
+/* =========================================
+   HIGHLIGHT BOX
+========================================= */
+
+.business-highlight {
+  width: 780px;
+  max-width: 100%;
+
+  margin-top: 6px;
+  margin-bottom: 35px;
+
+  padding: 13px 16px;
+
+  background: rgba(255, 255, 255, 0.88);
+
+  border-left: 3px solid #08705b;
+  border-radius: 6px;
+
+  box-shadow: 0 2px 8px rgba(17, 35, 62, 0.05);
+
+  box-sizing: border-box;
+}
+
+.business-highlight p {
+  margin: 0;
+
+  color: #123b63;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   CARDS GRID
+========================================= */
+
+.business-cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+
+  width: 100%;
+}
+
+/* =========================================
+   CARD
+========================================= */
+
+.business-card {
+  min-height: 190px;
+
+  padding: 17px 15px 13px;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  border: 1px solid #e1e4ea;
+  border-radius: 7px;
+
+  box-shadow:
+    0 2px 4px rgba(17, 31, 50, 0.04),
+    0 7px 16px rgba(17, 31, 50, 0.025);
+
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+}
+
+/* =========================================
+   CARD HEADER
+========================================= */
+
+.business-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 18px;
+}
+
+.business-card-label {
+  color: #607083;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.65px;
+}
+
+.business-card-icon {
+  color: #00685b;
+}
+
+/* =========================================
+   CARD VALUE
+========================================= */
+
+.business-card-value {
+  margin-bottom: 5px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 29px;
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+
+  white-space: nowrap;
+}
+
+.green-value {
+  color: #00634f;
+}
+
+.orange-value {
+  color: #a25b00;
+}
+
+.navy-value {
+  color: #071d3d;
+}
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.business-card-description {
+  margin: 0;
+
+  color: #27425e;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11.5px;
+  line-height: 1.55;
+}
+
+/* =========================================
+   CARD FOOTER
+========================================= */
+
+.business-card-footer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  margin-top: auto;
+  padding-top: 12px;
+
+  color: #00685b;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10.5px;
+  font-weight: 600;
+
+  border-top: 1px solid #eef0f3;
+}
+
+.business-card:nth-child(2) .business-card-footer {
+  color: #a25b00;
+}
+
+.business-card:nth-child(3) .business-card-footer {
+  color: #00685b;
+}
+
+.business-card:nth-child(4) .business-card-footer {
+  color: #00685b;
+}
+
+/* =========================================
+   DESKTOP SIZING
+========================================= */
+
+@media (min-width: 1440px) {
+  .business-container {
+    max-width: 1450px;
+  }
+
+  .business-title {
+    font-size: 41px;
+  }
+
+  .business-intro {
+    font-size: 14.5px;
+  }
+
+  .business-card {
+    min-height: 194px;
+  }
+}
+
+/* =========================================
+   LAPTOP
+========================================= */
+
+@media (max-width: 1100px) {
+  .business-container {
+    width: calc(100% - 48px);
+  }
+
+  .business-cards {
+    gap: 14px;
+  }
+
+  .business-card-value {
+    font-size: 25px;
+  }
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 850px) {
+  .business-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .business-title {
+    font-size: 34px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 560px) {
+  .business-opportunities {
+    padding: 25px 0;
+  }
+
+  .business-container {
+    width: calc(100% - 30px);
+  }
+
+  .business-title {
+    font-size: 30px;
+  }
+
+  .business-intro {
+    font-size: 13px;
+  }
+
+  .business-cards {
+    grid-template-columns: 1fr;
+  }
+}

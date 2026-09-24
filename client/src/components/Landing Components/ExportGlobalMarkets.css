@@ -1,0 +1,447 @@
+/* =========================================
+   EXPORT & GLOBAL MARKETS
+   Desktop-first traditional CSS
+========================================= */
+
+.export-markets {
+  width: 100%;
+  min-height: 525px;
+
+  background:#bfd2fa3b;
+
+  border-bottom: 1px solid #e4e7ef;
+
+  padding: 28px 0 20px;
+
+  box-sizing: border-box;
+}
+
+.export-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.42fr) minmax(380px, 1fr);
+  gap: 27px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* =========================================
+   LEFT CONTENT
+========================================= */
+
+.export-content {
+  min-width: 0;
+}
+
+/* =========================================
+   SECTION LABEL
+========================================= */
+
+.export-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 14px;
+
+  color: #07503f;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.35px;
+}
+
+.export-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 28px;
+  height: 28px;
+
+  background: #00533e;
+  color: #ffffff;
+
+  border-radius: 3px;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* =========================================
+   TITLE
+========================================= */
+
+.export-title {
+  margin: 0 0 13px;
+
+  color: #071d3d;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 29px;
+  line-height: 1.2;
+  font-weight: 700;
+
+  letter-spacing: -0.7px;
+}
+
+/* =========================================
+   SUBTITLE
+========================================= */
+
+.export-subtitle {
+  margin: 0 0 13px;
+
+  color: #a45b00;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  line-height: 1.35;
+  font-weight: 600;
+}
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.export-description {
+  max-width: 610px;
+
+  margin: 0 0 18px;
+
+  color: #28435f;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13.5px;
+  line-height: 1.65;
+}
+
+/* =========================================
+   FEATURE CARDS
+========================================= */
+
+.export-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 13px;
+
+  width: 100%;
+}
+
+.export-feature-card {
+  min-height: 173px;
+
+  padding: 15px 13px 13px;
+
+  background: rgba(241, 243, 253, 0.86);
+
+  border: 1px solid #dde1ee;
+  border-radius: 6px;
+
+  box-sizing: border-box;
+}
+
+.export-feature-icon {
+  margin-bottom: 8px;
+}
+
+.green-icon {
+  color: #00634f;
+}
+
+.orange-icon {
+  color: #ad6100;
+}
+
+.teal-icon {
+  color: #006d6b;
+}
+
+.export-feature-card h3 {
+  margin: 0 0 5px;
+
+  color: #071d3d;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.export-feature-card p {
+  margin: 0;
+
+  color: #3b536d;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11.5px;
+  line-height: 1.55;
+}
+
+/* =========================================
+   BOTTOM CTA
+========================================= */
+
+.export-bottom {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  margin-top: 17px;
+}
+
+.export-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  height: 40px;
+
+  padding: 0 13px;
+
+  background: #00563f;
+  color: #ffffff;
+
+  border: 0;
+  border-radius: 3px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.export-button:hover {
+  background: #004633;
+  transform: translateY(-1px);
+}
+
+.export-network {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  color: #29425e;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+}
+
+.export-network svg {
+  color: #006b69;
+  flex-shrink: 0;
+}
+
+/* =========================================
+   RIGHT VISUAL
+========================================= */
+
+.export-visual {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.export-image-wrapper {
+  position: relative;
+
+  width: 100%;
+  height: 383px;
+
+  overflow: hidden;
+
+  border-radius: 8px;
+
+  background: #000000;
+
+  box-shadow:
+    0 7px 15px rgba(17, 29, 49, 0.18),
+    0 2px 5px rgba(17, 29, 49, 0.08);
+}
+
+.export-image {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center;
+}
+
+/* =========================================
+   IMAGE DARK GRADIENT
+========================================= */
+
+.export-image-wrapper::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 48%;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 2, 5, 0.88),
+    rgba(3, 19, 36, 0.25),
+    transparent
+  );
+
+  pointer-events: none;
+}
+
+/* =========================================
+   IMAGE CONTENT
+========================================= */
+
+.export-image-overlay {
+  position: absolute;
+
+  left: 20px;
+  right: 20px;
+  bottom: 17px;
+
+  z-index: 2;
+  background-color: rgba(3, 19, 36, 0.25);
+
+  color: #ffffff;
+}
+
+.export-image-tag {
+  display: inline-block;
+
+  margin-bottom: 7px;
+  padding: 4px 8px;
+
+  background: #b86600;
+  color: #ffffff;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+.export-image-overlay h3 {
+  margin: 0 0 5px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 700;
+
+  letter-spacing: -0.2px;
+}
+
+.export-image-overlay p {
+  max-width: 390px;
+
+  margin: 0;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+/* =========================================
+   LARGE DESKTOP
+========================================= */
+
+@media (min-width: 1400px) {
+  .export-container {
+    max-width: 1300px;
+  }
+
+  .export-title {
+    font-size: 32px;
+  }
+
+  .export-description {
+    font-size: 14px;
+  }
+
+  .export-image-wrapper {
+    height: 405px;
+  }
+}
+
+/* =========================================
+   LAPTOP
+========================================= */
+
+@media (max-width: 950px) {
+  .export-container {
+    grid-template-columns: 1fr;
+  }
+
+  .export-visual {
+    justify-content: flex-start;
+  }
+
+  .export-image-wrapper {
+    height: 350px;
+  }
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 700px) {
+  .export-features {
+    grid-template-columns: 1fr;
+  }
+
+  .export-feature-card {
+    min-height: auto;
+  }
+
+  .export-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+  .export-markets {
+    padding: 20px 0;
+  }
+
+  .export-container {
+    width: calc(100% - 28px);
+  }
+
+  .export-title {
+    font-size: 26px;
+  }
+
+  .export-subtitle {
+    font-size: 15px;
+  }
+
+  .export-description {
+    font-size: 13px;
+  }
+
+  .export-image-wrapper {
+    height: 280px;
+  }
+}
