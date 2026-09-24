@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import '../../components/Landing Components/Careers.css';
+import '../../components/Landing Components/careers.css';
 import Navbar from '../../components/Landing Components/Navbar';
 import Footer from '../../components/Landing Components/Footer';
 
