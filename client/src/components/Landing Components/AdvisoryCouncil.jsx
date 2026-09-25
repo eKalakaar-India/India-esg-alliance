@@ -19,7 +19,7 @@ const advisoryMembers = [
     id: 1,
     name: "Dr. Krishna Prasad",
     designation: "Member of Parliament and Former IPS Officer",
-    organization: "Government of India",
+    organization: "",
     description:
       "Eminent policymaker and governance leader championing structural ESG policies, public-private stewardship, and systemic educational reforms across India.",
     image: krishna,
@@ -30,7 +30,7 @@ const advisoryMembers = [
     name: "Mashar Velapurath",
     designation:
       "Managing Director, AFC India Limited",
-    organization: "Government of India",
+    organization: "AFC India Limited",
     description:
       "Army veteran and sustainability leader with extensive experience in CSR, social impact, education and environmental initiatives.",
     image: mashar,
@@ -50,8 +50,8 @@ const advisoryMembers = [
   {
     id: 4,
     name: "Prof. Shankar Murthy",
-    designation: "Professor, Environmental Engineering and Management",
-    organization: "IIM Mumbai",
+    designation: "Professor, IIT-Bombay, IIM Mumbai",
+    organization: "IIT-Bombay, IIM Mumbai",
     description:
       "Renowned academician guiding social impact evaluation, community development metrics, and inclusive grassroots sustainability models.",
     image: shankar,

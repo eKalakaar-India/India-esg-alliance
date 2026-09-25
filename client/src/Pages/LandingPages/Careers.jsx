@@ -247,8 +247,8 @@ export default function Careers() {
                 {err('experience')}
               </div>
               <div className="cr-field cr-field--full">
-                <label htmlFor="cr-location">Current location or preferred district</label>
-                <input type="text" maxLength={120} {...bind('location')} />
+                <label htmlFor="cr-location">Current location (City, State)</label>
+                <input type="text" maxLength={120} {...bind('location')} placeholder='City, State' />
               </div>
               <div className="cr-field cr-field--full">
                 <label htmlFor="cr-message">Cover note (optional)</label>
