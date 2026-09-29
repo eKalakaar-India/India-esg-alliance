@@ -418,6 +418,29 @@ const Navbar = () => {
               <li>
                 <HashLink
                   smooth
+                  to="/upcomingevents"
+                  scroll={(el) =>
+                    el.scrollIntoView({ behavior: "smooth", block: "start" })
+                  }
+                  // className='highlighted-link'
+                >
+                  <span
+                    style={{
+                      width: "8px",
+                      height: "8px",
+                      borderRadius: "50%",
+                      marginRight: "6px",
+                      backgroundColor: "#6EE7B7",
+                      boxShadow: "0 0 8px #6EE7B7",
+                      display: "inline-block",
+                    }}
+                  />
+                  Upcoming Events
+                </HashLink>
+              </li>
+              <li>
+                <HashLink
+                  smooth
                   to="/events#training-programs"
                   scroll={(el) =>
                     el.scrollIntoView({ behavior: "smooth", block: "start" })

@@ -20,6 +20,48 @@ const row = (label, value) =>
   `<td style="padding:6px 12px;color:#0F2747;font-weight:600">${esc(value) || '–'}</td></tr>`;
 
 /** Sends the application (with CV attached) to the HR inbox, then a confirmation to the applicant. */
+export async function sendEventApplications(app, file) {
+  const role = ROLES[app.position];
+  const from = process.env.MAIL_FROM || process.env.MAIL_SMTP_USER;
+
+  await transporter.sendMail({
+    from,
+    to: process.env.CAREERS_TO || process.env.MAIL_SMTP_USER,
+    replyTo: `"${app.fullName.replace(/"/g, '')}" <${app.email}>`,
+    subject: `New application One Day Training Workshop: ${role} – ${app.fullName}`,
+    html: `
+      <div style="font-family:Arial,sans-serif;max-width:640px">
+        <div style="background:#0F2747;color:#fff;padding:16px 20px;border-bottom:4px solid #D6B98C">
+          <strong style="font-size:18px">New career application</strong>
+        </div>
+        <table style="width:100%;border-collapse:collapse;background:#F8FAFC">
+          ${row('Position', role)}${row('Name', app.fullName)}${row('Email', app.email)}
+          ${row('Phone', app.mobile)}${row('Company Name', app.companyName)}${row('Sector', app.sector)}
+        </table>
+        <p style="color:#0F2747;font-weight:600;margin:16px 12px 4px">Cover note</p>
+      </div>`,
+    attachments: [{ filename: file.originalname, content: file.buffer, contentType: file.mimetype }]
+  });
+
+  // Confirmation is best-effort: a failure here must not fail the application.
+  try {
+    await transporter.sendMail({
+      from,
+      to: app.email,
+      subject: 'We received your application – India ESG',
+      html: `
+        <div style="font-family:Arial,sans-serif;max-width:560px;color:#475569">
+          <p>Dear ${esc(app.fullName)},</p>
+          <p>Thank you for applying for <strong style="color:#0F2747">${esc(role)}</strong>. We have received your CV and our team will contact you if your profile matches the requirements.</p>
+          <p>Regards,<br><strong style="color:#0F2747">India ESG</strong></p>
+        </div>`
+    });
+  } catch (err) {
+    console.error('Confirmation email failed:', err.message);
+  }
+}
+
+
 export async function sendApplication(app, file) {
   const role = ROLES[app.position];
   const from = process.env.MAIL_FROM || process.env.MAIL_SMTP_USER;

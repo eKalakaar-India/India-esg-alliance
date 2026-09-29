@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import queryRouter from "./routes/query.routes.js";
 import careerRouter from "./routes/careers.js";
+import evenRouters from "./modules/Events/events.routers.js"
 
 const app = express();
 
@@ -31,6 +32,7 @@ app.get("/health", (req, res) => {
 
 app.use("/api/v1/queries", queryRouter);
 app.use("/api/v1/careers", careerRouter);
+app.use("/api/v1/events", evenRouters); // Reusing the same router for event applications
 
 // ================= 404 HANDLER =================
 

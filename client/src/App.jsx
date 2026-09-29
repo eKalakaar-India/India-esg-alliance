@@ -16,6 +16,7 @@ import ScrollToTop from "./components/Landing Components/ScrollToTop";
 import EventsPage from "./Pages/LandingPages/EventsPage";
 import CareersPage from "./Pages/LandingPages/Careers";
 import StickyMemberBar from "./components/Landing Components/StickyMemberBar";
+import UpcomingEvents from "./Pages/LandingPages/UpcomingEvents";
 
 function App() {
   const navigate = useNavigate();
@@ -55,6 +56,7 @@ function App() {
         <Route path="/contactus" element={<ContactUsPage />} />
         <Route path="/careers" element={<CareersPage />} />
         <Route path="/events" element={<EventsPage />} />
+        <Route path="/upcomingevents" element={<UpcomingEvents />} />
       </Routes>
       <StickyMemberBar/>
     </div>
