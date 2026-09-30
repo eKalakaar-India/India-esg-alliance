@@ -135,7 +135,7 @@ const ContactUs = () => {
               </div>
               <div>
                 <span className="detail-label">WhatsApp & Call</span>
-                <p className="detail-value">+91 93113 74958</p>
+                <p className="detail-value">+91 89760 20243</p>
               </div>
             </div>
 
