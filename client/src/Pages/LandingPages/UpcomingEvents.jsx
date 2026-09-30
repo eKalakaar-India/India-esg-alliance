@@ -18,7 +18,7 @@ export default function App() {
       </header>
 
       <main>
-        {/* <section className="hero">
+        <section className="hero">
           <div className="hero-content">
             <span className="pill">ONE DAY TRAINING WORKSHOP</span>
             <h1>
@@ -57,60 +57,26 @@ export default function App() {
           <div className="hero-image">
             <img src={esgexports} alt="Business Opportunities and ESG - Exclusively for MSMEs" />
           </div>
-        </section> */}
-        <section className="workshop-banner" aria-labelledby="workshop-banner-title">
-          <div className="workshop-banner__container">
-            <header className="workshop-banner__header">
-              <p className="workshop-banner__eyebrow">One-Day Training Workshop on</p>
-
-              <h2 id="workshop-banner-title" className="workshop-banner__title">
-                Business Opportunities & ESG – Exclusively for MSMEs
-              </h2>
-
-              <p className="workshop-banner__meta">
-                <time className="workshop-banner__date" dateTime={"2026-10-17"}>
-                  17 October 2026
-                </time>
-                <span className="workshop-banner__separator" aria-hidden="true">
-                  ·
-                </span>
-                <span className="workshop-banner__day">Saturday</span>
-                <span className="workshop-banner__separator" aria-hidden="true">
-                  ·
-                </span>
-                <span className="workshop-banner__location">Mumbai</span>
-              </p>
-            </header>
-
-            <div className="workshop-banner__cta-block">
-              <h3 className="workshop-banner__cta-heading">Reserve your seat</h3>
-              <p className="workshop-banner__cta-description">Limited seats for this one-day workshop in Mumbai.</p>
-
-              <button
-                className="workshop-banner__button"
-                onClick={() => setIsModalOpen(true)}
-              >
-                Register Now
-              </button>
-            </div>
-          </div>
         </section>
         <div className='event-body'>
           <section className="about">
             <h2>About the Program</h2>
             <p>
-              Environmental, Social and Governance (ESG) principles have become central to business
-              competitiveness, access to finance, responsible supply chains and export readiness. MSMEs
-              increasingly face sustainability expectations from regulators, buyers, investors and financial
-              institutions. This one-day workshop by India ESG Alliance is designed to build practical ESG
-              capacity among MSMEs, entrepreneurs and professionals by combining conceptual understanding
-              with hands-on tools and action planning.
+              The programme addresses the growing need for MSMEs to integrate ESG into business strategy, improve operational efficiency, strengthen governance, manage risks, and enhance access to domestic and international markets. It also supports alignment with responsible business conduct and emerging export requirements. The workshop will also provide MSMEs the opportunity to be able to get new business from diverse stakeholders - government, export and other businesses - learn ways to increase their market access and reach, and about the new regulatory and compliance landscape evolving in India and globally.
             </p>
+          </section>
+
+          <section className="attendance">
+            <h2>Who should attend?</h2>
+            <div className="attendance-list">
+              MSMEs   •   Exporters   •   Startups   •   Industry associations   •   Cluster development orgs   •   Consultants   •   CSR & sustainability professionals   •   Financial institutions   •   Government agencies
+            </div>
           </section>
 
           <section className="benefits">
             <h2>What You Will Gain</h2>
             <ul className="benefits-list">
+              <li>Training by industry veterans, professors from premier institutions (IITs/IIMs), provides opportunity to get new business opportunities with diverse stakeholders - government, export and other businesses. </li>
               <li>Explore new business opportunities (domestic and export market)</li>
               <li>Understand the fundamentals of ESG and their growing importance for businesses</li>
               <li>Training delivery by experts from industry, IITs and IIMs</li>
