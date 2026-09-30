@@ -18,7 +18,7 @@ export default function App() {
       </header>
 
       <main>
-        <section className="hero">
+        {/* <section className="hero">
           <div className="hero-content">
             <span className="pill">ONE DAY TRAINING WORKSHOP</span>
             <h1>
@@ -57,8 +57,44 @@ export default function App() {
           <div className="hero-image">
             <img src={esgexports} alt="Business Opportunities and ESG - Exclusively for MSMEs" />
           </div>
-        </section>
+        </section> */}
+        <section className="workshop-banner" aria-labelledby="workshop-banner-title">
+          <div className="workshop-banner__container">
+            <header className="workshop-banner__header">
+              <p className="workshop-banner__eyebrow">One-Day Training Workshop on</p>
 
+              <h2 id="workshop-banner-title" className="workshop-banner__title">
+                Business Opportunities & ESG – Exclusively for MSMEs
+              </h2>
+
+              <p className="workshop-banner__meta">
+                <time className="workshop-banner__date" dateTime={"2026-10-17"}>
+                  17 October 2026
+                </time>
+                <span className="workshop-banner__separator" aria-hidden="true">
+                  ·
+                </span>
+                <span className="workshop-banner__day">Saturday</span>
+                <span className="workshop-banner__separator" aria-hidden="true">
+                  ·
+                </span>
+                <span className="workshop-banner__location">Mumbai</span>
+              </p>
+            </header>
+
+            <div className="workshop-banner__cta-block">
+              <h3 className="workshop-banner__cta-heading">Reserve your seat</h3>
+              <p className="workshop-banner__cta-description">Limited seats for this one-day workshop in Mumbai.</p>
+
+              <button
+                className="workshop-banner__button"
+                onClick={() => setIsModalOpen(true)}
+              >
+                Register Now
+              </button>
+            </div>
+          </div>
+        </section>
         <div className='event-body'>
           <section className="about">
             <h2>About the Program</h2>
