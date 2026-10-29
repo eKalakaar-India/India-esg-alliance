@@ -17,6 +17,8 @@ import EventsPage from "./Pages/LandingPages/EventsPage";
 import CareersPage from "./Pages/LandingPages/Careers";
 import StickyMemberBar from "./components/Landing Components/StickyMemberBar";
 import UpcomingEvents from "./Pages/LandingPages/UpcomingEvents";
+import SEO from "./SEO";
+
 
 function App() {
   const navigate = useNavigate();
@@ -46,6 +48,7 @@ function App() {
 
   return (
     <div className="App">
+      <SEO />
       <ScrollToTop />
       <Routes>
         <Route path="/home" element={<HomePage />} />
